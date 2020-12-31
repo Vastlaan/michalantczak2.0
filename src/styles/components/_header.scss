@@ -1,0 +1,143 @@
+#image-decoration-1 {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: -29rem;
+
+    @include respond("m") {
+        display: block;
+        top: 50%;
+        left: -29rem;
+        bottom: auto;
+        transform: translateY(-50%);
+    }
+}
+#image-decoration-2 {
+    display: none;
+    position: absolute;
+    top: 10rem;
+    right: -29rem;
+
+    @include respond("s") {
+        display: block;
+    }
+
+    @include respond("m") {
+        display: block;
+        top: 50%;
+        right: -29rem;
+        transform: translateY(-50%);
+    }
+}
+#image-decoration-3 {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    right: 10rem;
+
+    @include respond("m") {
+        display: block;
+    }
+}
+.header {
+    background-color: $color-grey-primary;
+    overflow: hidden;
+    position: relative;
+
+    &__layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(7, 1fr);
+        grid-gap: 2.7rem;
+        grid-column-gap: 4.7rem;
+        padding: 1.4rem;
+        padding-top: 2.7rem;
+
+        @include respond("m") {
+            padding: 2.7rem;
+            grid-template-rows: repeat(12, 1fr);
+        }
+
+        @include respond("xxl") {
+            padding-top: 13rem;
+        }
+    }
+
+    &__motto {
+        grid-column: 1/3;
+        grid-row: 1/2;
+        z-index: 3;
+
+        @include respond("m") {
+            grid-column: 1/2;
+            grid-row: 1/3;
+        }
+    }
+
+    &__disclaimer {
+        grid-column: 1/3;
+        grid-row: 7/8;
+        z-index: 3;
+
+        @include respond("m") {
+            grid-column: 1/2;
+            grid-row: 9/12;
+        }
+    }
+
+    &__image {
+        grid-column: 1/3;
+        grid-row: 1/4;
+        display: flex;
+        justify-content: flex-start;
+        z-index: 2;
+
+        @include respond("m") {
+            grid-column: 1/2;
+            grid-row: 1/10;
+            justify-content: flex-end;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+
+            @include respond("s") {
+                height: 426px;
+            }
+        }
+    }
+
+    &__info {
+        grid-column: 1/3;
+        grid-row: 4/7;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        z-index: 2;
+
+        @include respond("m") {
+            grid-column: 2/3;
+            grid-row: 1/10;
+        }
+
+        h3 {
+            margin-bottom: 2.7rem;
+        }
+        h1 {
+            margin-bottom: 1.4rem;
+        }
+        p {
+            margin-bottom: 2.7rem;
+        }
+
+        &--btns {
+            display: flex;
+            margin-bottom: 2.7rem;
+
+            button {
+                margin-right: 2.7rem;
+            }
+        }
+    }
+}

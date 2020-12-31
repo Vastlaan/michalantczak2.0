@@ -1,0 +1,51 @@
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes slideFromRight {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromLeft {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+    }
+}
+
+@keyframes grow {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+    }
+}

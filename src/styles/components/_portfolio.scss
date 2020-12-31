@@ -1,0 +1,176 @@
+#image-decoration-4 {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: -29rem;
+
+    @include respond("m") {
+        display: block;
+        top: 50%;
+        left: -29rem;
+        bottom: auto;
+        transform: translateY(-50%);
+    }
+}
+#image-decoration-5 {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    @include respond("m") {
+        display: block;
+    }
+}
+#image-decoration-6 {
+    display: block;
+    position: absolute;
+    top: 90%;
+    left: 10rem;
+    z-index: 2;
+    font-size: 9rem;
+    color: $color-primary;
+    width: 9rem;
+    height: 9rem;
+
+    @include respond("m") {
+        display: block;
+    }
+}
+
+.portfolio {
+    position: relative;
+    padding: 14rem 0rem;
+    background-color: $color-grey-primary;
+    overflow-y: visible;
+
+    &__layout {
+        min-height: 50rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "front front"
+            "back back";
+
+        @include respond("m") {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "front back";
+        }
+    }
+
+    &__front {
+        margin: 5rem 0;
+        padding: 2rem;
+        grid-area: front;
+        display: flex;
+        flex-direction: column;
+        z-index: 5;
+        pointer-events: none;
+
+        h1 {
+            font-size: 4.5rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.3rem;
+            color: $color-grey-tertiary;
+
+            @include respond("s") {
+                font-size: 6rem;
+            }
+        }
+
+        p {
+            margin-top: auto;
+        }
+    }
+
+    &__center {
+        width: 35rem;
+        height: 35rem;
+        padding: 2rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        z-index: 1;
+
+        @include respond("m") {
+            transform: translate(-50%, -50%);
+        }
+
+        &--str {
+            font-size: 1.5rem;
+            letter-spacing: 0.3rem;
+            color: $color-primary;
+            text-align: right;
+        }
+        &--trn {
+            width: 100%;
+            font-size: 1.5rem;
+            letter-spacing: 0.3rem;
+            color: $color-secondary;
+            position: absolute;
+            bottom: 2rem;
+            left: 2rem;
+            transform-origin: left center;
+            transform: rotate(-90deg) translateX(25%);
+        }
+        &--eye {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 60%;
+            height: 60%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-image: url("../img/image-portfolio-eye.jpg");
+            background-size: cover;
+            background-position: center;
+            z-index: 10;
+
+            &:hover {
+                a {
+                    color: $color-grey-tertiary;
+                }
+            }
+            a {
+                font-size: 6rem;
+                font-weight: 700;
+                color: $color-grey-secondary;
+                cursor: pointer;
+                transition: all 0.3s;
+            }
+        }
+    }
+
+    &__back {
+        position: relative;
+        margin: auto 0 0 0;
+        padding: 2rem;
+        grid-area: back;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        overflow: hidden;
+
+        @include respond("m") {
+            align-items: flex-end;
+        }
+
+        &--text {
+            max-width: 80%;
+            margin-bottom: 2rem;
+            margin-top: 10rem;
+            @include respond("s") {
+                max-width: 50%;
+            }
+            @include respond("m") {
+                margin-bottom: 10rem;
+                margin-top: 2rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+.red {
+    color: $color-secondary;
+}
+.blue {
+    color: $color-primary !important;
+}
+.black {
+    color: $color-grey-primary !important;
+}
+.white {
+    color: $color-grey-secondary !important;
+}
+.green {
+    color: green;
+}
+.grey {
+    color: $color-grey-secondary;
+}
+.bc-red {
+    background-color: $color-secondary;
+}
+.bc-blue {
+    background-color: $color-primary !important;
+}
+.bc-black {
+    background-color: $color-grey-primary !important;
+}
+.bc-white {
+    background-color: $color-grey-secondary !important;
+}
+.bc-green {
+    background-color: green;
+}
+.bc-grey {
+    background-color: $color-grey-secondary;
+}
+
+.line {
+    border: none;
+    width: 20rem;
+    height: 2px;
+    background-color: $color-primary;
+    margin: 2.7rem auto;
+}
+.tac {
+    text-align: center;
+}

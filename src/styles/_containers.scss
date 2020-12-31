@@ -1,0 +1,8 @@
+.container-narrow {
+    max-width: 1255px;
+    margin: 0 auto;
+
+    @include respond("tv") {
+        max-width: 1659px;
+    }
+}

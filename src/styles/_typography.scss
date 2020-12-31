@@ -1,0 +1,37 @@
+// headings
+
+.heading-3 {
+    font-size: 1.9rem;
+    color: $color-secondary;
+    font-weight: 600;
+    max-width: 50rem;
+}
+.heading-1 {
+    font-size: 3.3rem;
+    color: $color-white;
+    font-weight: 800;
+    max-width: 50rem;
+}
+
+// paragraphs
+
+.para-long {
+    font-size: 1.6rem;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+    max-width: 35rem;
+    color: $color-grey-secondary;
+    line-height: 1.6;
+}
+.para-1 {
+    font-size: 1.6rem;
+    color: $color-grey-tertiary;
+    font-weight: 400;
+    max-width: 50rem;
+}
+.para-2 {
+    font-size: 1.6rem;
+    color: $color-grey-tertiary;
+    font-weight: 700;
+    max-width: 50rem;
+}
