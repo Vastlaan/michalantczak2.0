@@ -19,4 +19,9 @@
         color: $color-white;
         z-index: 1;
     }
+    &__buttons {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 }

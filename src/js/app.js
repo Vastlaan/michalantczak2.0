@@ -3,3 +3,4 @@ import "./animations";
 import "./images";
 import "./slider";
 import "./events";
+import "./footer";

@@ -10,7 +10,9 @@ import Image1 from "../img/image-1.jpg";
 // loading images
 
 const logo = document.querySelector("#image-logo");
+const logo2 = document.querySelector("#image-logo-2");
 logo.src = Logo;
+logo2.src = Logo;
 
 const decoration1 = document.querySelector("#image-decoration-1");
 decoration1.src = Decoration1;
