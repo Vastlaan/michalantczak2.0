@@ -11,7 +11,7 @@
     color: $color-grey-secondary !important;
 }
 .green {
-    color: green;
+    color: $color-green;
 }
 .grey {
     color: $color-grey-secondary;
@@ -29,7 +29,7 @@
     background-color: $color-grey-secondary !important;
 }
 .bc-green {
-    background-color: green !important;
+    background-color: $color-green !important;
 }
 .bc-grey {
     background-color: $color-grey-secondary;
@@ -47,4 +47,35 @@
 }
 .tar {
     text-align: right;
+}
+
+.flxcol {
+    display: flex;
+    flex-direction: column;
+}
+.ital {
+    font-style: italic;
+}
+.flximg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 2px solid $color-primary;
+    width: 14rem;
+    height: 14rem;
+    margin: 1.4rem 0;
+
+    img {
+        width: 14rem;
+        height: 14rem;
+    }
+}
+
+.hidesmldev {
+    display: none;
+
+    @include respond("m") {
+        display: initial;
+    }
 }

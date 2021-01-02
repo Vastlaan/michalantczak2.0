@@ -40,6 +40,7 @@
     position: relative;
     overflow: hidden;
     z-index: 2;
+    min-width: 15rem;
 
     span {
         transition: all 0.3s;

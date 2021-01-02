@@ -6,6 +6,7 @@ import Decoration3 from "../img/decoration-3.svg";
 import Decoration4 from "../img/cog3.svg";
 import Myself from "../img/myself.png";
 import Image1 from "../img/image-1.jpg";
+import Me2 from "../img/me-2.png";
 
 // loading images
 
@@ -29,11 +30,14 @@ decoration4.src = Decoration2;
 const decoration5 = document.querySelector("#image-decoration-5");
 decoration5.src = Decoration4;
 
-// const decoration6 = document.querySelector("#image-decoration-6");
-// decoration6.src = Decoration3;
+const decoration7 = document.querySelector("#image-decoration-7");
+decoration7.src = Decoration2;
 
 const myself = document.querySelector("#image-myself");
 myself.src = Myself;
 
 const image1 = document.querySelector("#image-1");
 image1.src = Image1;
+
+const imageSlide1 = document.querySelector("#slide-2-img-1");
+imageSlide1.src = Me2;
