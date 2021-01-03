@@ -19,6 +19,9 @@ module.exports = {
     devServer: {
         // specify source directory
         contentBase: "./dist",
+        host: "0.0.0.0", //your ip address
+        port: 8080,
+        disableHostCheck: true,
     },
 
     // filename and directory where files are compiled to

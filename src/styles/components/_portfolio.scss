@@ -42,15 +42,16 @@
     position: relative;
     padding: 14rem 0rem;
     background-color: $color-grey-primary;
-    overflow-y: visible;
+    overflow: hidden;
 
     &__layout {
         min-height: 50rem;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-areas:
-            "front front"
-            "back back";
+            "front"
+            "middle"
+            "back";
 
         @include respond("m") {
             grid-template-columns: 1fr 1fr;
@@ -59,13 +60,16 @@
     }
 
     &__front {
-        margin: 5rem 0;
-        padding: 2rem;
+        padding: 1.4rem;
         grid-area: front;
         display: flex;
         flex-direction: column;
         z-index: 5;
         pointer-events: none;
+
+        @include respond("m") {
+            margin: 5rem 0;
+        }
 
         h1 {
             font-size: 4.5rem;
@@ -85,51 +89,66 @@
     }
 
     &__center {
-        width: 35rem;
-        height: 35rem;
-        padding: 2rem;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -100%);
-        z-index: 1;
+        margin: 2rem 0;
+        padding: 1.4rem;
+        grid-area: middle;
 
         @include respond("m") {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -100%);
+            z-index: 1;
             transform: translate(-50%, -50%);
+            width: 35rem;
+            height: 35rem;
         }
 
         &--str {
             font-size: 1.5rem;
             letter-spacing: 0.3rem;
             color: $color-primary;
-            text-align: right;
+            text-align: left;
+
+            @include respond("m") {
+                text-align: right;
+            }
         }
         &--trn {
             width: 100%;
             font-size: 1.5rem;
             letter-spacing: 0.3rem;
             color: $color-secondary;
-            position: absolute;
-            bottom: 2rem;
-            left: 2rem;
-            transform-origin: left center;
-            transform: rotate(-90deg) translateX(25%);
+
+            @include respond("m") {
+                position: absolute;
+                bottom: 2rem;
+                left: 2rem;
+                transform-origin: left center;
+                transform: rotate(-90deg) translateX(25%);
+            }
         }
         &--eye {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            width: 60%;
-            height: 60%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             background-image: url("../img/image-portfolio-eye.jpg");
             background-size: cover;
             background-position: center;
             z-index: 10;
+            max-width: 35rem;
+
+            @include respond("m") {
+                max-width: none;
+                width: 60%;
+                height: 60%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
 
             &:hover {
                 a {
@@ -149,7 +168,7 @@
     &__back {
         position: relative;
         margin: auto 0 0 0;
-        padding: 2rem;
+        padding: 1.4rem;
         grid-area: back;
         display: flex;
         flex-direction: column;

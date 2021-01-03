@@ -17,6 +17,26 @@
     width: 100vw;
     z-index: 9;
 
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        width: 100%;
+        background-color: $color-grey-primary;
+        padding: 2.7rem;
+        z-index: 8;
+
+        @include respond("m") {
+            padding: 0;
+            width: auto;
+            position: static;
+            flex-direction: row;
+            margin-left: auto;
+        }
+    }
+
     &__layout {
         display: flex;
         padding: 1.4rem 2.7rem;
@@ -26,6 +46,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 100%;
+        z-index: 9;
+        background-color: $color-grey-primary;
+
+        @include respond("m") {
+            width: auto;
+        }
 
         img {
             margin-right: 1.4rem;
@@ -38,20 +65,39 @@
         }
     }
 
+    &__toggle {
+        margin-left: auto;
+
+        i {
+            color: $color-secondary;
+            font-size: 2.7rem;
+        }
+    }
+
     &__links {
         display: flex;
-        align-items: center;
-        margin-left: auto;
+        flex-direction: column;
         list-style: none;
+
+        @include respond("m") {
+            flex-direction: row;
+            align-items: center;
+        }
 
         li {
             color: white;
             font-family: $font-secondary;
             font-size: 1.6rem;
-            margin-right: 2.7rem;
+            margin: 1.4rem 0;
             transition: all 0.3s;
             position: relative;
             cursor: pointer;
+            text-transform: uppercase;
+
+            @include respond("m") {
+                text-transform: unset;
+                margin: 0 2.7rem 0 0;
+            }
 
             &:after {
                 content: "";
@@ -74,6 +120,11 @@
     &__icons {
         display: flex;
         align-items: center;
+        margin-top: 1.4rem;
+
+        @include respond("m") {
+            margin-top: 0;
+        }
 
         a {
             span,
