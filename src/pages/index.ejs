@@ -1,10 +1,25 @@
-<!DOCTYPE html>
+<% var item, key %>
+<% htmlWebpackPlugin.options.lang=htmlWebpackPlugin.options.lang || "en" %>
+<% htmlWebpackPlugin.options.links=htmlWebpackPlugin.options.links || [] %>
+<% htmlWebpackPlugin.options.meta=htmlWebpackPlugin.options.meta || [] %>
+<% htmlWebpackPlugin.options.scripts=htmlWebpackPlugin.options.scripts || [] %>
+
+  <!DOCTYPE html>
 <html lang="nl">
 
 <head>
   <meta charset="UTF-8">
+  <meta content="ie=edge" http-equiv="x-ua-compatible">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Michal Antczak freelance webdeveloper</title>  
+  <meta name="theme-color" content="#222" />
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <% if (Array.isArray(htmlWebpackPlugin.options.meta)) { %>
+  <% for (item of htmlWebpackPlugin.options.meta) { %>
+  <meta<% for (key in item) { %>
+  <%= key %>="<%= item[key] %>"<% } %>><% } %>
+  <% } %><% %>
+  <meta name='description' content='Flexible Webdeveloper nodig? Kies mij en onderscheid je van de concurrentie. Ik ontwerp prachtige en unieke websites, webapplicaties, webshops en online advertenties.'/>
+  
 </head>
 
 <body>
@@ -13,8 +28,10 @@
     
       <div class="navigation__layout">
         <div class='navigation__logo'>
-          <img id="image-logo" alt="logo" width='37' height='37' >
-          <h1><span class='red'>M</span>ichal <span class='blue'>A</span>ntczak</h1>
+          <button class='btn-home'><img id="image-logo" alt="logo" width='37' height='37'></button>
+          <button class='btn-home'>
+            <h1><span class='red'>M</span>ichal <span class='blue'>A</span>ntczak</h1>
+          </button>
           <button class="navigation__toggle hidelrgdev"><i class="zmdi zmdi-menu"></i></button>
         </div>
         <div class='navigation__menu'>
@@ -216,22 +233,22 @@
       <div class="slider__slide slider__slide--3" id='slide-3'>
 
         <div class="slider__slide--3-links">
-          <button>
+          <a href='https://github.io/vastlaan'>
             <i class="zmdi zmdi-github white"></i>
             <span>Github</span>
-          </button>
-          <button>
+          </a>
+          <a href='https://linkedin.com/michal-antczak'>
             <i class="zmdi zmdi-linkedin blue"></i>
             <span>LinkedIn</span>
-          </button>
-          <button>
+          </a>
+          <a href='https://www.facebook.com/webdesignstudiopurmerend'>
             <i class="zmdi zmdi-facebook blue"></i>
             <span>Facebook</span>
-          </button>
-          <button>
+          </a>
+          <a href='https://facebook.com'>
             <i class="zmdi zmdi-whatsapp green"></i>
             <span>WhatsApp</span>
-          </button>
+          </a>
         </div>
 
         <div class="slider__slide--grid">
@@ -263,7 +280,7 @@
   <section class="intersection-1">
     <hr class='line blue' />
     <h3 class="heading-1 white tac">Duik in mijn projecten en neem een kijkje op mijn github profile</h3>
-    <button class="button-primary"><span>Certificaten</span></button>
+    <button class="button-primary btn-certificaten"><span>Certificaten</span></button>
   </section>
 
   <!-- footer -->
@@ -294,32 +311,32 @@
       </div>
 
       <div class="footer__btn footer__btn--home">
-        <button>
+        <button class='btn-home'>
           <i class="zmdi zmdi-home blue"></i>
           Voorpagina
         </button>
       </div>
 
       <div class="footer__btn footer__btn--skills">
-        <button>
+        <button class='btn-skills'>
           <i class="zmdi zmdi-code red"></i>
           Skills
         </button>
       </div>
       <div class="footer__btn footer__btn--portfolio">
-        <button>
+        <button class='btn-portfolio'>
           <i class="zmdi zmdi-collection-case-play green"></i>
           Portfolio
         </button>
       </div>
       <div class="footer__btn footer__btn--contact">
-        <button>
+        <button class='btn-contact'>
           <i class="zmdi zmdi-headset-mic red"></i>
           Contact
         </button>
       </div>
       <div class="footer__btn footer__btn--certificats">
-        <button>
+        <button class='btn-certificaten'>
           <i class="zmdi zmdi-graduation-cap green"></i>
           Certificaten
         </button>
@@ -338,7 +355,7 @@
       <ul>
         <li><a href="https://github.io/vastlaan">Github</a></li>
         <li><a href="https://linkedin.com/michal-antczak">LinkedIn</a></li>
-        <li><a href="https://facebook.com/">Facebook</a></li>
+        <li><a href="https://www.facebook.com/webdesignstudiopurmerend">Facebook</a></li>
         <li><a href="./contact.html">Cookies Policy</a></li>
       </ul>
     </div>

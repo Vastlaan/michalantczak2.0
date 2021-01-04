@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
@@ -9,23 +10,15 @@ module.exports = {
 
     // which files to track
     entry: {
-        index: "./src/js/app.js",
-        contact: "./src/js/app.js",
+        index: "./src/js/index.js",
+        contact: "./src/js/contact.js",
     },
-
-    // // use build in source map to track files in the bundle
-    // devtool: "inline-source-map",
-
-    // // development server configuration
-    // devServer: {
-    //     // specify source directory
-    //     contentBase: "./dist",
-    // },
 
     // filename and directory where files are compiled to
     output: {
         filename: "[name].bundle.js",
         path: path.resolve(__dirname, "dist"),
+        assetModuleFilename: "assets/[name].[ext]",
     },
 
     // specify loaders for given extensions and its options
@@ -52,9 +45,7 @@ module.exports = {
                             publicPath: "",
                         },
                     },
-
                     "css-loader",
-
                     {
                         loader: "sass-loader",
                         options: {
@@ -63,6 +54,12 @@ module.exports = {
                     },
                 ],
             },
+            // html
+            {
+                test: /\.(html)$/,
+                use: ["html-loader"],
+            },
+
             // images
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -88,16 +85,32 @@ module.exports = {
         new HtmlWebpackPlugin({
             // specifies html template file to use, auto generate index.html file in dist directory
             chunks: ["index"],
-            title: "Index",
+            // inject: "head",
+            title: "Michal Antczak - freelance webdeveloper",
+            // meta: {
+            //     description:
+            //         "Webdeveloper nodig? Kies mij en onderscheid je van de concurrentie. Ik ontwerp voor je een prachtige en unieke websites, webapplicaties, webshops en online advertenties.",
+            // },
+            favicon: "./src/img/logo.svg",
             filename: "index.html",
-            template: path.resolve("./src/pages/index.html"),
+            template: path.resolve("./src/pages/index.ejs"),
         }),
         new HtmlWebpackPlugin({
             // specifies html template file to use, auto generate index.html file in dist directory
             chunks: ["contact"],
-            title: "Contact",
+            title: "Contact Michal Antczak",
+            lang: "en-US",
+            meta: [
+                {
+                    name: "description",
+                    content:
+                        "Neem contact met mij op. Vul onderstande formulier of bel: (+31) (0) 6 82 30 70 51  of stuur mij een e-mail: info@michalantczak.com. Tot later!",
+                },
+            ],
+            favicon: "./src/img/logo.svg",
             filename: "contact.html",
-            template: path.resolve("./src/pages/contact.html"),
+            template: "./src/pages/contact.ejs",
         }),
+        // new FaviconsWebpackPlugin("./src/img/logo.svg"),
     ],
 };

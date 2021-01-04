@@ -89,6 +89,7 @@
         }
         &--btns {
             margin-bottom: 2.7rem;
+            margin-top: auto;
         }
 
         &--1 {
@@ -99,12 +100,6 @@
             background-position: center;
         }
         &--2 {
-            // background-image: url("../img/slide-1.jpg");
-            // background-color: none;
-            // background-size: cover;
-            // background-repeat: no-repeat;
-            // background-position: center;
-
             h1 {
                 margin-bottom: 1.4rem;
             }
@@ -133,8 +128,14 @@
                 max-width: 1255px;
                 margin: 0 auto;
 
-                button {
+                a {
                     font-size: 1.6rem;
+                    transition: all 0.3s;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: $color-primary;
+                    }
                 }
                 i {
                     margin-right: 0.4rem;

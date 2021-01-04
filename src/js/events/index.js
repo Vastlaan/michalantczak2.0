@@ -3,12 +3,16 @@ import { gsap } from "gsap";
 // load onclick events
 
 const contactButtons = document.querySelectorAll(".btn-contact");
+const homeButtons = document.querySelectorAll(".btn-home");
 
 contactButtons.forEach((b) => {
     b.addEventListener(
         "click",
         () => (window.location.href = "./contact.html")
     );
+});
+homeButtons.forEach((b) => {
+    b.addEventListener("click", () => (window.location.href = "./index.html"));
 });
 
 // toggle menu functionality

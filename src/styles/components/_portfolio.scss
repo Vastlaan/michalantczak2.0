@@ -109,7 +109,7 @@
             font-size: 1.5rem;
             letter-spacing: 0.3rem;
             color: $color-primary;
-            text-align: left;
+            text-align: center;
 
             @include respond("m") {
                 text-align: right;
@@ -120,6 +120,7 @@
             font-size: 1.5rem;
             letter-spacing: 0.3rem;
             color: $color-secondary;
+            text-align: center;
 
             @include respond("m") {
                 position: absolute;
@@ -127,6 +128,7 @@
                 left: 2rem;
                 transform-origin: left center;
                 transform: rotate(-90deg) translateX(25%);
+                text-align: left;
             }
         }
         &--eye {
@@ -139,8 +141,10 @@
             background-position: center;
             z-index: 10;
             max-width: 35rem;
+            margin: 0 auto;
 
             @include respond("m") {
+                margin: 0;
                 max-width: none;
                 width: 60%;
                 height: 60%;

@@ -1,12 +1,12 @@
 // images
-import Logo from "../img/logo.svg";
-import Decoration1 from "../img/decoration-1.svg";
-import Decoration2 from "../img/decoration-2.svg";
-import Decoration3 from "../img/decoration-3.svg";
-import Decoration4 from "../img/cog3.svg";
-import Myself from "../img/myself.png";
-import Image1 from "../img/image-1.jpg";
-import Me2 from "../img/me-2.png";
+import Logo from "../../img/logo.svg";
+import Decoration1 from "../../img/decoration-1.svg";
+import Decoration2 from "../../img/decoration-2.svg";
+import Decoration3 from "../../img/decoration-3.svg";
+import Decoration4 from "../../img/cog3.svg";
+import Myself from "../../img/myself.png";
+import Image1 from "../../img/image-1.jpg";
+import Me2 from "../../img/me-2.png";
 
 // loading images
 
