@@ -65,14 +65,10 @@ function switchSlides() {
             break;
         }
     }
-
-    // allSliderButtons.forEach((button) => {
-    //     if (button.getAttribute("for") === `slide-${i + 1}`)
-    //         gsap.set(button, { backgroundColor: "white" });
-    // });
 }
 
 // launch switching slides every 5sec.
+switchSlides();
 const launchSlideshow = setInterval(() => {
     switchSlides();
 }, 5000);

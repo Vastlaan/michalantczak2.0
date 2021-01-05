@@ -16,104 +16,52 @@
     <%= htmlWebpackPlugin.options.title %>
   </title>
   <% if (Array.isArray(htmlWebpackPlugin.options.meta)) { %>
-    <% for (item of htmlWebpackPlugin.options.meta) { %>
-      <meta<% for (key in item) { %>
-        <%= key %>="<%= item[key] %>"<% } %>><% } %>
-                <% } %>
-                  <% %>
+  <% for (item of htmlWebpackPlugin.options.meta) { %>
+  <meta<% for (key in item) { %>
+  <%= key %>="<%= item[key] %>"<% } %>><% } %>
+  <% } %>
+  <% %>
 
 </head>
 
 <body>
-<!-- navigation -->
-<nav class='navigation'>
-
-  <div class="navigation__layout">
-    <div class='navigation__logo'>
-      <button class='btn-home'><img id="image-logo" alt="logo" width='37' height='37'></button>
-      <button class='btn-home'>
-        <h1><span class='red'>M</span>ichal <span class='blue'>A</span>ntczak</h1>
-      </button>
-      <button class="navigation__toggle hidelrgdev"><i class="zmdi zmdi-menu"></i></button>
-    </div>
-    <div class='navigation__menu'>
-      <ul class='navigation__links'>
-        <a href="./skills.html">
-          <li>Skills</li>
-        </a>
-        <a href="./portfolio.html">
-          <li>Portfolio</li>
-        </a>
-        <a href="./certificaten.html">
-          <li>Certificaten</li>
-        </a>
-        <a href="./contact.html">
-          <li>Contact</li>
-        </a>
-      </ul>
-      <div class='navigation__icons'>
-        <a href="https://github.com/vastlaan">
-          <i class="zmdi zmdi-github grey"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/michal-antczak/">
-          <i class="zmdi zmdi-linkedin"></i>
-        </a>
+  <!-- navigation -->
+  <nav class='navigation'>
+  
+    <div class="navigation__layout">
+      <div class='navigation__logo'>
+        <button class='btn-home'><img id="image-logo" alt="logo" width='37' height='37'></button>
+        <button class='btn-home'>
+          <h1><span class='red'>M</span>ichal <span class='blue'>A</span>ntczak</h1>
+        </button>
+        <button class="navigation__toggle hidelrgdev"><i class="zmdi zmdi-menu"></i></button>
+      </div>
+      <div class='navigation__menu'>
+        <ul class='navigation__links'>
+          <a href="./skills.html">
+            <li>Skills</li>
+          </a>
+          <a href="./portfolio.html">
+            <li>Portfolio</li>
+          </a>
+          <a href="./certificaten.html">
+            <li>Certificaten</li>
+          </a>
+          <a href="./contact.html">
+            <li>Contact</li>
+          </a>
+        </ul>
+        <div class='navigation__icons'>
+          <a href="https://github.com/vastlaan">
+            <i class="zmdi zmdi-github grey"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/michal-antczak/">
+            <i class="zmdi zmdi-linkedin"></i>
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-</nav>
-
-  <!-- header -->
-  <section class="contact">
-    <div class="contact__grid">
-
-      <div class="contact__details">
-        <img id="image-logo-3" alt="logo" width='74' height='74'>
-        <h3 class="heading-2 black"><strong>Contact</strong> Gegevens</h3>
-        <div class="contact__details--field">
-          <p class="para-small">Stuur mij een e-mail:</p>
-          <a href="mailto:info@michalantczak.com">info@michalantczak.com</a>
-        </div>
-        <div class="contact__details--field">
-          <p class="para-small">Of dit e-mail:</p>
-          <a href="mailto:info@itcontext.nl">info@itcontext.nl</a>
-        </div>
-        <div class="contact__details--field">
-          <p class="para-small">Mobiel:</p>
-          <a href="tel:0031682307051">(+31) (0)6 82 30 70 51</a>
-        </div>
-        <div class="contact__details--field">
-          <p class="para-small">Telefoon:</p>
-          <a href="tel:0031299705072">(0) 299 70 50 72</a>
-        </div>
-      </div>
-
-      <form action="submitContactForm" class="contact__form">
-        <h3 class="heading-2 black"><span>Contact</span> Formulier</h3>
-        <p class="para-small">Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-          Doloribus, est veniam. Quas velit explicabo architecto error excepturi minima dolore expedita. 
-          Quaerat saepe ipsam earum explicabo sed officiis modi necessitatibus non.
-        </p>
-        <div class='contact__form--inputs'>
-          <div class="contact__form--inputs-i">
-            <label for="name">Naam:</label>
-            <input type="text" id="name" name='name' placeholder='Jouw naam'>
-          </div>
-          <div class="contact__form--inputs-i">
-            <label for="email">E-mail:</label>
-            <input type="email" id='email' name='email' placeholder='Jouw e-mailadres'>
-          </div>
-        </div>
-        <div class="contact__form--message">
-          <label for="message">Bericht:</label>
-          <textarea name="message" id="message" cols="30" rows="5" placeholder="Stel je vraag hier..."></textarea>
-        </div>
-        <p class="para-small blue">Bij het versturen van dit formulier geef ik toestemming dat deze gegevens mogen worden gebruikt.
-        Mijn gegevens zullen niet worden gebruikt voor andere doeleinden en niet worden verstrekt aan derden.</p>
-        <button class='button-secondary' type='submit'>Versturen</button>
-      </form>
-    </div>
-  </section>
+  </nav>
 
   <!-- intersection -->
   <section class="intersection-1">
@@ -121,7 +69,7 @@
     <h3 class="heading-1 white tac">je kan ook een contact opnemen via social media</h3>
     <div class="intersection-1__buttons">
       <a href="https://linkedin.com/michal-antczak"><i class="zmdi zmdi-linkedin blue"></i></a>
-      <a href="https://facebook/webdesignstudiopurmerend"><i class="zmdi zmdi-whatsapp green"></i></a>      
+      <a href="https://facebook/webdesignstudiopurmerend"><i class="zmdi zmdi-whatsapp green"></i></a>
       <a href="https://facebook/webdesignstudiopurmerend"><i class="zmdi zmdi-facebook blue"></i></a>
     </div>
   </section>
@@ -130,16 +78,19 @@
 
   <section class="about">
     <div class="container-narrow">
-      <h3 class="heading-1">Voorstelling</h3>
+      <h3 class="heading-1">Kort over mij</h3>
       <div class="about__grid">
-        <p class="para-1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure nihil dolore, delectus vitae
+        <p class="para-1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure nihil dolore,
+          delectus vitae
           necessitatibus expedita quo nostrum cum, repellat molestiae autem quod!</p>
-        <p class="para-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit doloremque asperiores nisi
-          consectetur mollitia minima, odit obcaecati sit eos, ipsam officiis soluta maxime deserunt dolorem accusantium ut
+        <p class="para-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit doloremque
+          asperiores nisi
+          consectetur mollitia minima, odit obcaecati sit eos, ipsam officiis soluta maxime deserunt dolorem
+          accusantium ut
           distinctio inventore totam.</p>
       </div>
     </div>
-    
+
   </section>
 
   <!-- footer -->

@@ -74,7 +74,50 @@
         }
     }
 }
+.button-secondary {
+    padding: 1rem 1.4rem;
+    font-size: 1.9rem;
+    background-color: $color-primary;
+    border: none;
+    color: $color-grey-secondary;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    min-width: 15rem;
 
+    span {
+        transition: all 0.3s;
+    }
+
+    &::after {
+        content: "";
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.9rem;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        width: 100%;
+        height: 100%;
+        background-color: $color-secondary;
+        transition: all 0.3s;
+        z-index: -1;
+    }
+
+    &:hover {
+        span {
+            display: block;
+            transform: translateX(-120%);
+        }
+
+        &::after {
+            top: 0;
+            left: 0;
+        }
+    }
+}
 .button-bullet {
     width: 1.4rem;
     height: 1.4rem;

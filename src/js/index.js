@@ -1,5 +1,8 @@
+// styles
 import "../styles/main.scss";
+// animations
 import "./animations/landing";
+// images
 import "./images/landing";
 import "./slider";
 import "./events";

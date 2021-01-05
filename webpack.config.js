@@ -12,6 +12,9 @@ module.exports = {
     entry: {
         index: "./src/js/index.js",
         contact: "./src/js/contact.js",
+        skills: "./src/js/contact.js",
+        certificaten: "./src/js/contact.js",
+        portfolio: "./src/js/contact.js",
     },
 
     // use build in source map to track files in the bundle
@@ -100,7 +103,7 @@ module.exports = {
             chunks: ["index"],
             // inject: "head",
             title: "Michal Antczak - freelance webdeveloper",
-            lang: "en-US",
+            lang: "nl-NL",
             meta: [
                 {
                     name: "description",
@@ -116,7 +119,7 @@ module.exports = {
             // specifies html template file to use, auto generate index.html file in dist directory
             chunks: ["contact"],
             title: "Contact Michal Antczak",
-            lang: "en-US",
+            lang: "nl-NL",
             meta: [
                 {
                     name: "description",
@@ -127,6 +130,53 @@ module.exports = {
             favicon: "./src/img/logo.svg",
             filename: "contact.html",
             template: "./src/pages/contact.ejs",
+        }),
+        new HtmlWebpackPlugin({
+            // specifies html template file to use, auto generate index.html file in dist directory
+            chunks: ["skills"],
+            title: "Skills Michal Antczak",
+            lang: "nl-NL",
+            meta: [
+                {
+                    name: "description",
+                    content:
+                        "Ontdek welke programeur talen, frameworks en andere webtools ken ik best. Gebruik je gelijke technologieen in jouw projecten? Prima! Ik kan voor je direct aan de slag!",
+                },
+            ],
+            favicon: "./src/img/logo.svg",
+            filename: "skills.html",
+            template: "./src/pages/skills.ejs",
+        }),
+        new HtmlWebpackPlugin({
+            // specifies html template file to use, auto generate index.html file in dist directory
+            chunks: ["certificaten"],
+            title: "Certificaten Michal Antczak",
+            lang: "nl-NL",
+            meta: [
+                {
+                    name: "description",
+                    content:
+                        "Hierbij mijn collectie van sommige certificaten, die ik heb gehaald tijdens mijn otwikkeling process als een developer.",
+                },
+            ],
+            favicon: "./src/img/logo.svg",
+            filename: "certificaten.html",
+            template: "./src/pages/certificaten.ejs",
+        }),
+        new HtmlWebpackPlugin({
+            // specifies html template file to use, auto generate index.html file in dist directory
+            chunks: ["portfolio"],
+            title: "Portfolio Michal Antczak",
+            lang: "nl-NL",
+            meta: [
+                {
+                    name: "description",
+                    content: "Galerij van de projecten die ik heb ontworpen.",
+                },
+            ],
+            favicon: "./src/img/logo.svg",
+            filename: "portfolio.html",
+            template: "./src/pages/portfolio.ejs",
         }),
         // new FaviconsWebpackPlugin({
         //     // Your source logo (required)

@@ -4,6 +4,9 @@ import { gsap } from "gsap";
 
 const contactButtons = document.querySelectorAll(".btn-contact");
 const homeButtons = document.querySelectorAll(".btn-home");
+const portfolioButtons = document.querySelectorAll(".btn-portfolio");
+const certificatenButtons = document.querySelectorAll(".btn-certificaten");
+const skillsButtons = document.querySelectorAll(".btn-skills");
 
 contactButtons.forEach((b) => {
     b.addEventListener(
@@ -13,6 +16,21 @@ contactButtons.forEach((b) => {
 });
 homeButtons.forEach((b) => {
     b.addEventListener("click", () => (window.location.href = "./index.html"));
+});
+portfolioButtons.forEach((b) => {
+    b.addEventListener(
+        "click",
+        () => (window.location.href = "./portfolio.html")
+    );
+});
+certificatenButtons.forEach((b) => {
+    b.addEventListener(
+        "click",
+        () => (window.location.href = "./certificaten.html")
+    );
+});
+skillsButtons.forEach((b) => {
+    b.addEventListener("click", () => (window.location.href = "./skills.html"));
 });
 
 // toggle menu functionality

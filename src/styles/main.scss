@@ -9,11 +9,16 @@
 @import "typography";
 @import "buttons";
 
+// global
 @import "components/navigation";
+@import "components/footer";
+// landing page
 @import "components/header";
 @import "components/skills";
 @import "components/portfolio";
 @import "components/intersection-1";
 @import "components/gallery";
 @import "components/slider";
-@import "components/footer";
+// contact page
+@import "components/contact";
+@import "components/about";
