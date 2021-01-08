@@ -34,6 +34,16 @@
 .bc-grey {
     background-color: $color-grey-secondary;
 }
+.bc-trans-lar {
+    background-color: initial;
+
+    @include respond("m") {
+        background-color: transparent !important;
+    }
+}
+.pad-m {
+    padding: 2.7rem;
+}
 
 .line {
     border: none;

@@ -1,4 +1,5 @@
 const path = require("path");
+const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 // const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -12,9 +13,9 @@ module.exports = {
     entry: {
         index: "./src/js/index.js",
         contact: "./src/js/contact.js",
-        skills: "./src/js/contact.js",
-        certificaten: "./src/js/contact.js",
-        portfolio: "./src/js/contact.js",
+        skills: "./src/js/skills.js",
+        certificaten: "./src/js/certificaten.js",
+        portfolio: "./src/js/portfolio.js",
     },
 
     // use build in source map to track files in the bundle
@@ -98,6 +99,11 @@ module.exports = {
     plugins: [
         new MiniCssExtractPlugin(),
         new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }), // cleans up dist directory on every rebuild to get rid of deleted/unused files (stale assets are not erased, like index.html file)
+        new webpack.DefinePlugin({
+            TOKEN: JSON.stringify(
+                "hhtel3922Ssjeeo3rjesdfksfowlwodFEWFFsfjfWHNNRE"
+            ),
+        }),
         new HtmlWebpackPlugin({
             // specifies html template file to use, auto generate index.html file in dist directory
             chunks: ["index"],

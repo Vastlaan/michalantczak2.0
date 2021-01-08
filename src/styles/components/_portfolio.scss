@@ -76,7 +76,7 @@
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 0.3rem;
-            color: $color-grey-tertiary;
+            color: $color-grey-dark;
 
             @include respond("s") {
                 font-size: 6rem;

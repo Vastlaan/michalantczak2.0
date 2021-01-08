@@ -1,3 +1,23 @@
+#image-decoration-9 {
+    position: absolute;
+    top: 10rem;
+    left: 0;
+    z-index: 1;
+}
+#image-decoration-10 {
+    position: absolute;
+    bottom: 0;
+    right: 0rem;
+    z-index: 1;
+    display: block;
+    width: 36rem;
+    height: 17rem;
+
+    path {
+        stroke: rgba($color-grey-secondary, 0.3);
+    }
+}
+
 .contact {
     padding: 2.7rem;
     padding-top: calc(10rem + 14rem);
@@ -7,16 +27,20 @@
     display: flex;
     flex-direction: center;
     align-items: center;
+    position: relative;
 
     &__grid {
         padding: 2.7rem;
-        background-color: $color-grey-tertiary;
+        background-color: $color-grey-dark;
+
         display: grid;
         grid-template-columns: 1fr;
         grid-gap: 2.7rem;
         max-width: 1255px;
         margin: 0 auto;
         border-radius: 5px;
+        z-index: 2;
+        position: relative;
 
         @include respond("m") {
             grid-template-columns: repeat(3, 1fr);
@@ -34,11 +58,11 @@
             margin: 1.4rem 0;
         }
         p {
-            color: $color-grey-primary;
+            color: $color-grey-secondary;
             margin-bottom: 1.4rem;
         }
         a {
-            color: $color-grey-primary;
+            color: $color-grey-secondary;
             font-weight: 600;
             font-size: 1.9rem;
             position: relative;
@@ -56,7 +80,7 @@
             }
 
             &:hover {
-                letter-spacing: 0.2rem;
+                letter-spacing: 0.15rem;
 
                 &::after {
                     width: 50%;
@@ -78,6 +102,8 @@
         padding: 2.7rem;
         box-shadow: 0 0 4.7rem rgba(0, 0, 0, 0.6);
         border-radius: 5px;
+        max-width: 65rem;
+        border: 3px solid $color-primary;
 
         h3 {
             margin-bottom: 1.4rem;
@@ -90,11 +116,12 @@
         &--inputs {
             margin: 2.7rem 0 1.4rem 0;
             display: flex;
-            justify-content: space-between;
+            flex-wrap: wrap;
 
             &-i {
                 display: flex;
                 flex-direction: column;
+                margin-right: 4.7rem;
 
                 label {
                     font-family: $font-primary;
@@ -134,6 +161,7 @@
                 background-color: none;
                 padding: 1.4rem;
                 font-size: 1.4rem;
+                max-width: 44rem;
 
                 &:focus,
                 :active {

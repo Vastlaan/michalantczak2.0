@@ -1,14 +1,11 @@
 // styles
 import "../styles/main.scss";
 // images
-import "./images/contact";
+import "./images/certificaten";
 // events
 import "./events";
 // animations
-import "./animations/contact";
+import "./animations/certificaten";
 
 // components specific
 import "./footer";
-
-// form
-import "./form";
