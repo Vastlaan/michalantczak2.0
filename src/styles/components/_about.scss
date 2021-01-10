@@ -17,4 +17,20 @@
             grid-gap: 2.7rem;
         }
     }
+
+    ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+
+        li {
+            font-size: 1.6rem;
+            color: $color-white;
+            margin: 1.4rem 0;
+
+            strong {
+                color: $color-primary;
+            }
+        }
+    }
 }

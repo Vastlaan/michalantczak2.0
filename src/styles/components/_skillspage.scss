@@ -100,3 +100,55 @@
         }
     }
 }
+
+.sklmain {
+    margin-top: 2.7rem;
+
+    &__nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        list-style: none;
+
+        li {
+            color: white;
+            font-family: $font-secondary;
+            font-size: 1.6rem;
+            margin-right: 1.4rem;
+            transition: all 0.3s;
+            border: 1px solid $color-secondary;
+            padding: 0.4rem 1.4rem;
+            cursor: pointer;
+
+            &:hover {
+                color: $color-grey-secondary;
+                background-color: $color-secondary;
+            }
+        }
+    }
+
+    &__list {
+        padding: 2.7rem 1.4rem;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        &--tool {
+            margin: 1.4rem;
+            padding: 1.4rem;
+            max-width: 26rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            p {
+                margin-bottom: 1.4rem;
+                text-align: center;
+            }
+            span {
+                margin-bottom: 1.4rem;
+                font-size: 4.7rem;
+            }
+        }
+    }
+}
