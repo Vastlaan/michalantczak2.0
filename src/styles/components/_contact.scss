@@ -20,7 +20,7 @@
 
 .contact {
     padding: 2.7rem;
-    padding-top: calc(10rem + 14rem);
+    padding-top: 7rem;
     width: 100%;
     min-height: 50rem;
     background-color: $color-grey-primary;
@@ -29,16 +29,21 @@
     align-items: center;
     position: relative;
 
+    @include respond("xxl") {
+        padding-top: 14rem;
+    }
+
     &__grid {
         padding: 2.7rem;
-        background-color: $color-grey-dark;
+        background-color: $color-grey-primary;
 
         display: grid;
         grid-template-columns: 1fr;
         grid-gap: 2.7rem;
         max-width: 1255px;
         margin: 0 auto;
-        border-radius: 5px;
+        //border: 2px solid $color-secondary;
+        //border-radius: 5px;
         z-index: 2;
         position: relative;
 
@@ -95,7 +100,7 @@
     }
 
     &__form {
-        transform: translateY(-14rem);
+        //transform: translateY(-14rem);
         grid-column: 2/4;
         grid-row: 1/-1;
         background-color: $color-grey-secondary;
@@ -104,6 +109,7 @@
         border-radius: 5px;
         max-width: 65rem;
         border: 3px solid $color-primary;
+        justify-self: end;
 
         h3 {
             margin-bottom: 1.4rem;
