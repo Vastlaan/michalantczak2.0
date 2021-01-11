@@ -1,6 +1,13 @@
 // images
 import Logo from "../../img/logo.svg";
 import Deco5 from "../../img/decoration-5.svg";
+import Figma from "../../img/figma-logo.png";
+import Webpack from "../../img/webpack-logo.png";
+import Next from "../../img/next-logo.png";
+import Gatsby from "../../img/gatsby-logo.png";
+import GraphQl from "../../img/graphql-logo.png";
+import Jest from "../../img/jest-logo.png";
+import TypeScript from "../../img/typescript-logo.png";
 
 // loading images
 
@@ -11,3 +18,18 @@ logo2.src = Logo;
 
 const decoration5 = document.querySelector("#decoration-5");
 decoration5.src = Deco5;
+
+const figmaLogo = document.querySelector("#figma-logo");
+figmaLogo.src = Figma;
+const webpackLogo = document.querySelector("#webpack-logo");
+webpackLogo.src = Webpack;
+const nextLogo = document.querySelector("#next-logo");
+nextLogo.src = Next;
+const gatsbyLogo = document.querySelector("#gatsby-logo");
+gatsbyLogo.src = Gatsby;
+const graphqlLogo = document.querySelector("#graphql-logo");
+graphqlLogo.src = GraphQl;
+const jestLogo = document.querySelector("#jest-logo");
+jestLogo.src = Jest;
+const typescriptLogo = document.querySelector("#typescript-logo");
+typescriptLogo.src = TypeScript;

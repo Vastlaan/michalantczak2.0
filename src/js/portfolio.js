@@ -1,11 +1,11 @@
 // styles
 import "../styles/main.scss";
 // images
-import "./images/skills";
+import "./images/portfolio";
 // events
 import "./events";
 // animations
-import "./animations/skills";
+import "./animations/portfolio";
 
 // components specific
 import "./footer";

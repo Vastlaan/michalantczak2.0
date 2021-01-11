@@ -3,7 +3,8 @@ import "../styles/main.scss";
 // images
 import "./images/skills";
 // events
-import "./events";
+import "./events/index";
+import "./events/skills";
 // animations
 import "./animations/skills";
 
