@@ -27,17 +27,17 @@
 
 <body>
 <!-- navigation -->
-<nav class='navigation bc-trans-lar'>
+<nav class='navigation'>
 
   <div class="navigation__layout">
-    <div class='navigation__logo bc-trans-lar'>
+    <div class='navigation__logo'>
       <button class='btn-home'><img id="image-logo" alt="logo" width='37' height='37'></button>
       <button class='btn-home'>
         <h1><span class='red'>M</span>ichal <span class='blue'>A</span>ntczak</h1>
       </button>
       <button class="navigation__toggle hidelrgdev"><i class="zmdi zmdi-menu"></i></button>
     </div>
-    <div class='navigation__menu bc-trans-lar'>
+    <div class='navigation__menu'>
       <ul class='navigation__links'>
         <a href="./skills.html">
           <li>Skills</li>
@@ -67,9 +67,9 @@
 <!-- main -->
 <main class="certificaten">
 
-    <div class="certificaten__background"></div>
+    <!-- <div class="background"></div>
 
-    <div class="certificaten__intro">
+    <div class="intro">
       <hr class='line bc-red' />
       <h3 class='heading-1 tac'>Certificaten</h3>
       <p class="para-long tac gold">
@@ -77,13 +77,35 @@
         media heen gegrepen en heb talloze artikelen, tutorials en cursussen verzameld. Sommigen van hen zou ik het meest willen
         benadrukken.
       </p>
-    </div>
+    </div> -->
 
-    <div class="certificaten__folder">
+    <!-- header  -->
+    <header class="certheader">
+    
+      <div class="container-narrow">
+        <div class="certheader__layout">
+          <div class="certheader__top">
+            <i class="zmdi zmdi-graduation-cap"></i>
+            <h1 class="heading-4">Certificaten</h1>
+          </div>
+          <div class="certheader__main">
+            <h3 class="heading-1">Mijn <strong>onderwijspad</strong> wordt gekenmerkt door een continue <span>ontwikkelingsproces</span></h3>
+            <p class="para-2">
+              Ik heb de meeste van mijn kennis door de online media heen gegrepen en heb talloze artikelen, tutorials en cursussen verzameld.
+              Sommigen van hen zou ik het meest willen benadrukken.
+            </p>
+            <button class="button-primary"><span>Lees verder</span></button>
+          </div>
+        </div>
+      </div>
+    
+    </header>
 
-      <div class="certificaten__folder--file" >
+    <div class="folder">
+
+      <div class="folder--file" >
         <h3 class="headign-3">Introduction to Computer Science and <span>Programming</span></h3>
-        <div class="certificaten__folder--file-img">
+        <div class="folder--file-img">
           <img id='image-certificaten-1' alt="certificate" width=110 height=80 />
         </div>
         <p><strong>Issued by:</strong> Massechuset Institute of Technology</p>
@@ -93,9 +115,9 @@
         </button>
       </div>
 
-      <div class="certificaten__folder--file">
+      <div class="folder--file">
         <h3 class="headign-3"><span>Object-Oriented</span> Programming with JAVA I</h3>
-        <div class="certificaten__folder--file-img">
+        <div class="folder--file-img">
           <img id='image-certificaten-2' alt="certificate" width=110 height=80 />
         </div>
         <p><strong>Issued by:</strong> University of Helsinki</p>
@@ -104,9 +126,9 @@
           <span class="zmdi zmdi-fullscreen"></span> Full Screen View
         </button>
       </div>
-      <div class="certificaten__folder--file">
+      <div class="folder--file">
         <h3 class="headign-3"><span>Object-Oriented</span> Programming with JAVA II</h3>
-        <div class="certificaten__folder--file-img">
+        <div class="folder--file-img">
         
           <img id='image-certificaten-3' alt="certificate" width=110 height=80 />
         </div>
@@ -115,14 +137,10 @@
         <button class="button-full" id='certbox3'>
           <span class="zmdi zmdi-fullscreen"></span> Full Screen View
         </button>
-      </div>
-    </div>
-
-    <div class="certificaten__folder">
-    
-      <div class="certificaten__folder--file">
+      </div>   
+      <div class="folder--file">
         <h3 class="headign-3">The fundamentals of <span>Digital Marketing</span></h3>
-        <div class="certificaten__folder--file-img">
+        <div class="folder--file-img">
           <img id='image-certificaten-4' alt="certificate" width=110 height=80 />
         </div>
         <p><strong>Issued by:</strong> Google Digital Garage</p>
@@ -132,9 +150,9 @@
         </button>
       </div>
     
-      <div class="certificaten__folder--file">
+      <div class="folder--file">
         <h3 class="headign-3"><span>Advanced</span> CSS & Sass</h3>
-        <div class="certificaten__folder--file-img">
+        <div class="folder--file-img">
           <img id='image-certificaten-5' alt="certificate" width=110 height=80 />
         </div>
         <p><strong>Issued by:</strong> Udemy</p>
@@ -143,10 +161,9 @@
           <span class="zmdi zmdi-fullscreen"></span> Full Screen View
         </button>
       </div>
-
-      <div class="certificaten__folder--file">
+      <div class="folder--file">
         <h3 class="headign-3"><span>Node with React</span> Fullstack Web Development</h3>
-        <div class="certificaten__folder--file-img">
+        <div class="folder--file-img">
           <img id='image-certificaten-6' alt="certificate" width=110 height=80 />
         </div>
         <p><strong>Issued by:</strong> Udemy</p>
@@ -154,14 +171,10 @@
         <button class="button-full" id='certbox6'>
           <span class="zmdi zmdi-fullscreen"></span> Full Screen View
         </button>
-      </div>
-    </div>
-
-    <div class="certificaten__folder">
-    
-      <div class="certificaten__folder--file">
+      </div>   
+      <div class="folder--file">
         <h3 class="headign-3"><span>Google Analytics</span> for beginners</h3>
-        <div class="certificaten__folder--file-img">
+        <div class="folder--file-img">
           <img id='image-certificaten-7' alt="certificate" width=110 height=80 />
         </div>
         <p><strong>Issued by:</strong> Google Analytics Academy</p>
@@ -170,10 +183,9 @@
           <span class="zmdi zmdi-fullscreen"></span> Full Screen View
         </button>
       </div>
-    
-      <div class="certificaten__folder--file">
+      <div class="folder--file">
         <h3 class="headign-3"><span>Google</span> My Business</h3>
-        <div class="certificaten__folder--file-img">
+        <div class="folder--file-img">
           <img id='image-certificaten-8' alt="certificate" width=110 height=80 />
         </div>
         <p><strong>Issued by:</strong> Google Digital Garage</p>

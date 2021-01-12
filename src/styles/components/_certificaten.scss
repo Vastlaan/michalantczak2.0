@@ -2,130 +2,182 @@ body {
     background-color: $color-grey-primary;
 }
 
-.certificaten {
-    min-height: 100vh;
+.certheader {
+    min-height: 45rem;
+    background-image: url("../img/header-cert.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
 
-    &__background {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        z-index: -1;
-        background-image: url("../img/header-cert.jpg");
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+    &__layout {
+        padding: 1.4rem 0rem;
+
+        @include respond("s") {
+            padding: 2.7rem;
+        }
+    }
+    &__top {
+        display: inline-block;
+        padding: 1.4rem;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0.5rem;
+            background-image: linear-gradient(
+                to right,
+                $color-secondary,
+                $color-primary
+            );
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0.5rem;
+            height: 100%;
+            background-image: linear-gradient(
+                to bottom,
+                $color-secondary,
+                $color-primary
+            );
+        }
+
+        i {
+            font-size: 2.7rem;
+            color: $color-primary;
+            margin-right: 1.4rem;
+        }
+        h1 {
+            display: inline-block;
+        }
     }
 
-    &__intro {
-        padding-top: 8rem;
+    &__main {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
+        position: relative;
+        padding: 2.7rem;
+
+        @include respond("s") {
+            padding: 2.7rem 4.7rem;
+        }
 
         @include respond("xxl") {
-            padding-top: 14rem;
+            padding: 4.7rem;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0.5rem;
+            height: 50%;
+            background-image: linear-gradient(
+                to bottom,
+                $color-secondary,
+                $color-primary
+            );
         }
 
         h3 {
             margin-bottom: 1.4rem;
-            font-size: 4.4rem;
-            letter-spacing: 0.15rem;
         }
         p {
-            max-width: 65rem;
+            margin-bottom: 2.7rem;
         }
     }
+}
 
-    &__folder {
-        background-color: $color-grey-primary;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-gap: 2.7rem;
-        align-content: center;
-        justify-items: center;
-        margin: 4.7rem auto;
-        padding: 2.7rem 4.7rem;
-        max-width: 1255px;
+.folder {
+    background-color: $color-grey-primary;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 1.4rem auto 2.7rem auto;
+    padding: 2.7rem 4.7rem;
+    max-width: 1255px;
+
+    &--file {
+        margin: 2.7rem;
+        max-width: 33rem;
+        width: 33rem;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.3s;
+        padding: 2.7rem;
+        background-color: #333;
+        border: 1px solid $color-secondary;
 
         @include respond("l") {
-            grid-template-columns: repeat(3, 1fr);
+            width: 30rem;
         }
 
-        &--file {
-            max-width: 33rem;
-            width: 33rem;
-            display: flex;
-            flex-direction: column;
+        &-img {
+            width: 11rem;
+            height: 8rem;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 1.4rem;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                z-index: 1;
+                transition: all 0.3s;
+                display: block;
+                transform: translateX(0%);
+            }
+        }
+
+        h3 {
+            margin-bottom: 1.4rem;
+            display: block;
             transition: all 0.3s;
-            padding: 2.7rem;
-            background-color: #333;
-            border: 1px solid $color-gold;
+            z-index: 3;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: $color-grey-secondary;
+            margin-bottom: 1.4rem;
 
-            @include respond("l") {
-                width: 30rem;
+            span {
+                color: $color-primary !important;
             }
+        }
+        p {
+            display: block;
+            transition: all 0.3s;
+            z-index: 3;
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: $color-grey-secondary;
+            margin-bottom: 0.4rem;
 
-            &-img {
-                width: 11rem;
-                height: 8rem;
-                position: relative;
-                overflow: hidden;
+            &:last-child {
                 margin-bottom: 1.4rem;
-
-                img {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: auto;
-                    object-fit: cover;
-                    z-index: 1;
-                    transition: all 0.3s;
-                    display: block;
-                    transform: translateX(0%);
-                }
             }
 
-            h3 {
-                margin-bottom: 1.4rem;
-                display: block;
-                transition: all 0.3s;
-                z-index: 3;
-                font-size: 1.6rem;
-                font-weight: 600;
-                color: $color-grey-secondary;
-                margin-bottom: 1.4rem;
-
-                span {
-                    color: $color-gold !important;
-                }
+            strong {
+                color: $color-white;
             }
-            p {
-                display: block;
-                transition: all 0.3s;
-                z-index: 3;
-                font-size: 1.2rem;
-                font-weight: 300;
-                color: $color-grey-secondary;
-                margin-bottom: 0.4rem;
+        }
+        button {
+            margin-top: auto;
 
-                &:last-child {
-                    margin-bottom: 1.4rem;
-                }
-
-                strong {
-                    color: $color-white;
-                }
-            }
-            button {
-                margin-top: auto;
-
-                span {
-                    margin-right: 1.4rem;
-                }
+            span {
+                margin-right: 1.4rem;
             }
         }
     }
