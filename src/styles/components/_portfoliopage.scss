@@ -1,3 +1,106 @@
+#decoration-11 {
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    width: 29rem;
+    height: 23rem;
+}
+
+.portheader {
+    min-height: 45rem;
+    background-image: url("../img/header-port.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    &__layout {
+        padding: 1.4rem 0rem;
+
+        @include respond("s") {
+            padding: 2.7rem;
+        }
+    }
+    &__top {
+        display: inline-block;
+        padding: 1.4rem;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0.5rem;
+            background-image: linear-gradient(
+                to right,
+                $color-secondary,
+                $color-primary
+            );
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0.5rem;
+            height: 100%;
+            background-image: linear-gradient(
+                to bottom,
+                $color-secondary,
+                $color-primary
+            );
+        }
+
+        i {
+            font-size: 2.7rem;
+            color: $color-primary;
+            margin-right: 1.4rem;
+        }
+        h1 {
+            display: inline-block;
+        }
+    }
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        padding: 2.7rem;
+
+        @include respond("s") {
+            padding: 2.7rem 4.7rem;
+        }
+
+        @include respond("xxl") {
+            padding: 4.7rem;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0.5rem;
+            height: 50%;
+            background-image: linear-gradient(
+                to bottom,
+                $color-secondary,
+                $color-primary
+            );
+        }
+
+        h3 {
+            margin-bottom: 1.4rem;
+        }
+        p {
+            margin-bottom: 2.7rem;
+        }
+    }
+}
+
 .projects {
     display: flex;
     flex-direction: column;
@@ -7,9 +110,18 @@
 }
 
 .project {
-    padding: 1.4rem 2.7rem;
+    padding: 1.4rem;
     background-color: #333;
     margin: 2.7rem auto;
+    transition: all 0.3s;
+
+    @include respond("m") {
+        padding: 1.4rem 2.7rem;
+    }
+
+    &:hover {
+        background-color: #444;
+    }
 
     &__header {
         padding: 0rem 0.4rem;
@@ -19,11 +131,13 @@
         align-items: center;
 
         h3 {
-            color: $color-grey-tertiary !important;
+            color: $color-grey-secondary;
+            font-weight: 600;
+            text-transform: uppercase;
         }
 
         span {
-            color: $color-primary;
+            color: $color-grey-tertiary;
             font-size: 1.4rem;
 
             i {
@@ -44,9 +158,12 @@
         }
 
         &--img {
-            width: 200%;
+            max-width: 65rem;
             overflow: hidden;
-            margin-right: 2.7rem;
+
+            @include respond("m") {
+                margin-right: 2.7rem;
+            }
 
             img {
                 display: block;
@@ -56,13 +173,18 @@
         &--details {
             display: flex;
             flex-direction: column;
+            margin-top: 1.4rem;
+
+            @include respond("m") {
+                margin-top: 0;
+            }
 
             h6 {
                 margin-bottom: 1.4rem;
             }
             ul {
                 list-style: none;
-                margin-bottom: 2.7rem;
+                margin-bottom: 1.4rem;
 
                 li {
                     margin-bottom: 0.9rem;
@@ -77,14 +199,17 @@
                 }
             }
             p {
-                margin-bottom: 2.7rem;
+                font-size: 1.6rem;
+                margin-bottom: 1.4rem;
                 color: $color-grey-tertiary;
             }
 
             &-btns {
                 margin-top: auto;
                 a {
+                    display: inline-block;
                     margin-right: 1.4rem;
+                    max-width: 22rem;
                 }
             }
         }

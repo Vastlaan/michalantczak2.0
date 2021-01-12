@@ -103,30 +103,37 @@ body {
     flex-wrap: wrap;
     justify-content: flex-start;
     margin: 1.4rem auto 2.7rem auto;
-    padding: 2.7rem 4.7rem;
+    padding: 2.7rem 1.4rem;
     max-width: 1255px;
 
+    @include respond("m") {
+        padding: 2.7rem 4.7rem;
+    }
+    @include respond("xxl") {
+        padding: 1.4rem;
+    }
+
     &--file {
-        margin: 2.7rem;
-        max-width: 33rem;
-        width: 33rem;
+        margin: 1.3rem;
+        width: 100%;
         display: flex;
         flex-direction: column;
         transition: all 0.3s;
         padding: 2.7rem;
         background-color: #333;
-        border: 1px solid $color-secondary;
+        //border: 1px solid $color-secondary;
 
-        @include respond("l") {
-            width: 30rem;
+        @include respond("m") {
+            width: 36rem;
+            max-width: 36rem;
         }
 
         &-img {
-            width: 11rem;
-            height: 8rem;
+            width: 30rem;
+            height: 24rem;
             position: relative;
             overflow: hidden;
-            margin-bottom: 1.4rem;
+            margin-bottom: auto;
 
             img {
                 position: absolute;
@@ -147,13 +154,14 @@ body {
             display: block;
             transition: all 0.3s;
             z-index: 3;
-            font-size: 1.6rem;
+            font-size: 1.9rem;
             font-weight: 600;
             color: $color-grey-secondary;
             margin-bottom: 1.4rem;
 
             span {
                 color: $color-primary !important;
+                font-weight: 800;
             }
         }
         p {
@@ -165,7 +173,7 @@ body {
             color: $color-grey-secondary;
             margin-bottom: 0.4rem;
 
-            &:last-child {
+            &:last-of-type {
                 margin-bottom: 1.4rem;
             }
 
