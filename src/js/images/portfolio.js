@@ -2,6 +2,12 @@
 import Logo from "../../img/logo.svg";
 import Deco1 from "../../img/decoration-6.svg";
 import Noir from "../../img/project-noir.jpg";
+import Webshop from "../../img/project-webshop.jpg";
+import Restaurant from "../../img/project-restaurant.jpg";
+import Barber from "../../img/project-barber.jpg";
+import Resume from "../../img/project-resume.jpg";
+import Itcontext from "../../img/project-itcontext.jpg";
+import Elementor from "../../img/project-elementor.jpg";
 
 // loading images
 
@@ -13,6 +19,18 @@ logo2.src = Logo;
 
 const noir = document.querySelector("#portfolio-image-1");
 noir.src = Noir;
+const webshop = document.querySelector("#portfolio-image-2");
+webshop.src = Webshop;
+const restaurant = document.querySelector("#portfolio-image-3");
+restaurant.src = Restaurant;
+const barber = document.querySelector("#portfolio-image-4");
+barber.src = Barber;
+const resume = document.querySelector("#portfolio-image-5");
+resume.src = Resume;
+const itcontext = document.querySelector("#portfolio-image-6");
+itcontext.src = Itcontext;
+const elementor = document.querySelector("#portfolio-image-7");
+elementor.src = Elementor;
 
 const deco11 = document.querySelector("#decoration-11");
 deco11.src = Deco1;
