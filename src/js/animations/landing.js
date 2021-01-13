@@ -1,25 +1,10 @@
 //animations lib
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger.js";
+import { slideFromDown } from "./functions";
 
 //plugins
 gsap.registerPlugin(ScrollTrigger);
-
-// animation options
-
-const slideFromDown = (target) => {
-    return {
-        scrollTrigger: {
-            trigger: target,
-            start: "top bottom",
-            toggleActions: "restart none none reset",
-        },
-        duration: 1.5,
-        opacity: 0,
-        y: 100,
-        ease: "power4",
-    };
-};
 
 // landing page animations
 
@@ -79,6 +64,8 @@ gsap.from(".als2deco", {
     duration: 60,
     ease: "power2",
 });
+
+gsap.from(".intersection-1", slideFromDown(".intersection-1"));
 
 // const tl1 = gsap.timeline({
 //     scrollTrigger: {
