@@ -1,13 +1,13 @@
 const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-// const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
     // which environment is this file applying to
-    mode: "development",
+    mode: "production",
 
     // which files to track
     entry: {
@@ -18,23 +18,10 @@ module.exports = {
         portfolio: "./src/js/portfolio.js",
     },
 
-    // use build in source map to track files in the bundle
-    devtool: "inline-source-map",
-
-    // development server configuration
-    devServer: {
-        // specify source directory
-        // publicPath: "./dist",
-        contentBase: "./dist/nl",
-        host: "0.0.0.0", //your ip address
-        port: 8080,
-        disableHostCheck: true,
-    },
-
     // filename and directory where files are compiled to
     output: {
         filename: "[name].bundle.js",
-        path: path.resolve(__dirname, "dist", "nl"),
+        path: path.resolve(__dirname, "dist", "en"),
         assetModuleFilename: "assets/[name].[ext]",
     },
 
@@ -62,7 +49,6 @@ module.exports = {
                             publicPath: "",
                         },
                     },
-
                     "css-loader",
                     {
                         loader: "sass-loader",
@@ -110,12 +96,12 @@ module.exports = {
             chunks: ["index"],
             // inject: "head",
             title: "Michal Antczak - freelance webdeveloper",
-            lang: "nl-NL",
+            lang: "en-US",
             meta: [
                 {
                     name: "description",
                     content:
-                        "Webdeveloper nodig? Kies mij en onderscheid je van de concurrentie. Ik ontwerp voor je een prachtige en unieke websites, webapplicaties, webshops en online advertenties.",
+                        "Need a Web Developer? Choose me and stand out from the competition. I design beautiful and unique websites, webapplications, webshops and online advertisements for you.",
                 },
                 {
                     name: "robots",
@@ -132,7 +118,7 @@ module.exports = {
                 {
                     name: "og:description",
                     content:
-                        "Webdeveloper nodig? Kies mij en onderscheid je van de concurrentie. Ik ontwerp voor je een prachtige en unieke websites, webapplicaties, webshops en online advertenties.",
+                        "Need a Web Developer? Choose me and stand out from the competition. I design beautiful and unique websites, webapplications, webshops and online advertisements for you.",
                 },
                 {
                     name: "og:image",
@@ -145,18 +131,18 @@ module.exports = {
             ],
             favicon: "./src/img/logo.svg",
             filename: "index.html",
-            template: "./src/pages/nl/index.ejs",
+            template: "./src/pages/en/index.ejs",
         }),
         new HtmlWebpackPlugin({
             // specifies html template file to use, auto generate index.html file in dist directory
             chunks: ["contact"],
             title: "Contact Michal Antczak",
-            lang: "nl-NL",
+            lang: "en-US",
             meta: [
                 {
                     name: "description",
                     content:
-                        "Neem contact met mij op. Vul onderstande formulier of bel: (+31) (0) 6 82 30 70 51  of stuur mij een e-mail: info@michalantczak.com",
+                        "Contact me. Fill in the form below or call: (+31) (0) 6 82 30 70 51 or send me an e-mail: info@michalantczak.com",
                 },
                 {
                     name: "robots",
@@ -173,7 +159,7 @@ module.exports = {
                 {
                     name: "og:description",
                     content:
-                        "Neem contact met mij op. Vul onderstande formulier of bel: (+31) (0) 6 82 30 70 51  of stuur mij een e-mail: info@michalantczak.com",
+                        "Contact me. Fill in the form below or call: (+31) (0) 6 82 30 70 51 or send me an e-mail: info@michalantczak.com",
                 },
                 {
                     name: "og:image",
@@ -186,18 +172,18 @@ module.exports = {
             ],
             favicon: "./src/img/logo.svg",
             filename: "contact.html",
-            template: "./src/pages/nl/contact.ejs",
+            template: "./src/pages/en/contact.ejs",
         }),
         new HtmlWebpackPlugin({
             // specifies html template file to use, auto generate index.html file in dist directory
             chunks: ["skills"],
             title: "Skills Michal Antczak",
-            lang: "nl-NL",
+            lang: "en-US",
             meta: [
                 {
                     name: "description",
                     content:
-                        "Ontdek welke programeur talen, frameworks en andere webtools ken ik best. Gebruik je gelijke technologieen in jouw projecten? Prima! Ik kan voor je direct aan de slag!",
+                        "Discover which programming languages, frameworks and other web tools I know best. Do you use similar technologies in your projects? Fine! I can get started right away!",
                 },
                 {
                     name: "robots",
@@ -214,7 +200,7 @@ module.exports = {
                 {
                     name: "og:description",
                     content:
-                        "Ontdek welke programeur talen, frameworks en andere webtools ken ik best. Gebruik je gelijke technologieen in jouw projecten? Prima! Ik kan voor je direct aan de slag!",
+                        "Discover which programming languages, frameworks and other web tools I know best. Do you use similar technologies in your projects? Fine! I can get started right away!",
                 },
                 {
                     name: "og:image",
@@ -227,18 +213,18 @@ module.exports = {
             ],
             favicon: "./src/img/logo.svg",
             filename: "skills.html",
-            template: "./src/pages/nl/skills.ejs",
+            template: "./src/pages/en/skills.ejs",
         }),
         new HtmlWebpackPlugin({
             // specifies html template file to use, auto generate index.html file in dist directory
             chunks: ["certificaten"],
-            title: "Certificaten Michal Antczak",
-            lang: "nl-NL",
+            title: "Certificats Michal Antczak",
+            lang: "en-US",
             meta: [
                 {
                     name: "description",
                     content:
-                        "Hierbij mijn collectie van sommige certificaten, die ik heb gehaald tijdens mijn otwikkeling process als een developer.",
+                        "Hereby my collection of some certificates that I obtained during my learning process as a developer.",
                 },
                 {
                     name: "robots",
@@ -255,7 +241,7 @@ module.exports = {
                 {
                     name: "og:description",
                     content:
-                        "Hierbij mijn collectie van sommige certificaten, die ik heb gehaald tijdens mijn otwikkeling process als een developer.",
+                        "Hereby my collection of some certificates that I obtained during my learning process as a developer.",
                 },
                 {
                     name: "og:image",
@@ -268,17 +254,17 @@ module.exports = {
             ],
             favicon: "./src/img/logo.svg",
             filename: "certificaten.html",
-            template: "./src/pages/nl/certificaten.ejs",
+            template: "./src/pages/en/certificaten.ejs",
         }),
         new HtmlWebpackPlugin({
             // specifies html template file to use, auto generate index.html file in dist directory
             chunks: ["portfolio"],
             title: "Portfolio Michal Antczak",
-            lang: "nl-NL",
+            lang: "en-US",
             meta: [
                 {
                     name: "description",
-                    content: "Galerij van de projecten die ik heb ontworpen.",
+                    content: "Gallery of the projects I have designed.",
                 },
                 {
                     name: "robots",
@@ -294,7 +280,7 @@ module.exports = {
                 },
                 {
                     name: "og:description",
-                    content: "Galerij van de projecten die ik heb ontworpen.",
+                    content: "Gallery of the projects I have designed.",
                 },
                 {
                     name: "og:image",
@@ -307,7 +293,7 @@ module.exports = {
             ],
             favicon: "./src/img/logo.svg",
             filename: "portfolio.html",
-            template: "./src/pages/nl/portfolio.ejs",
+            template: "./src/pages/en/portfolio.ejs",
         }),
     ],
 };

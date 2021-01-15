@@ -1,9 +1,3 @@
-<% var item, key %>
-<% htmlWebpackPlugin.options.lang=htmlWebpackPlugin.options.lang || "en" %>
-<% htmlWebpackPlugin.options.links=htmlWebpackPlugin.options.links || [] %>
-<% htmlWebpackPlugin.options.meta=htmlWebpackPlugin.options.meta || [] %>
-<% htmlWebpackPlugin.options.scripts=htmlWebpackPlugin.options.scripts || [] %>
-
 <!DOCTYPE html>
 <html lang="nl">
 
@@ -15,14 +9,6 @@
   <title>
     <%= htmlWebpackPlugin.options.title %>
   </title>
-  <% if (Array.isArray(htmlWebpackPlugin.options.meta)) { %>
-  <% for (item of htmlWebpackPlugin.options.meta) { %>
-  <meta<% for (key in item) { %>
-  <%= key %>="<%= item[key] %>"<% } %>><% } %>
-  <% } %>
-  <% %>
-
-
 </head>
 
 <body>
@@ -82,7 +68,7 @@
               Ik heb de meeste van mijn kennis door de online media heen gegrepen en heb talloze artikelen, tutorials en cursussen verzameld.
               Sommigen van hen zou ik het meest willen benadrukken.
             </p>
-            <button class="button-primary"><span>Lees verder</span></button>
+            <button class="button-primary btn-read"><span>Lees verder...</span></button>
           </div>
         </div>
       </div>
@@ -190,14 +176,17 @@
   <div class="container-narrow">
     <h3 class="heading-1">Kort over mij</h3>
     <div class="about__grid">
-      <p class="para-1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure nihil dolore,
-        delectus vitae
-        necessitatibus expedita quo nostrum cum, repellat molestiae autem quod!</p>
-      <p class="para-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit doloremque
-        asperiores nisi
-        consectetur mollitia minima, odit obcaecati sit eos, ipsam officiis soluta maxime deserunt dolorem
-        accusantium ut
-        distinctio inventore totam.</p>
+      <p class="para-1">
+        Aangenaam! Ik ben een gepassioneerde webontwikkelaar die zich richt op het leveren van netjes gecodeerde, SEO-effectieve en sterk
+        converterende websites. Met gebruikmaking van moderne technologieën bied ik digitale oplossingen die uw publiek
+        verrassen en verrukken.
+      </p>
+      <p class="para-1">
+        Ik begrijp volledig hoe on-page SEO, kwalitatieve en relevante inhoud, geoptimaliseerde keywords samen met off-page
+        promotie, backlinks opbouwen, rankings en verkeer analyse de zichtbaarheid en merkbekendheid van het bedrijf van de
+        klant kunnen verbeteren. Ik vergeet nooit de usability van de website, zijn prestaties en documentatie van mijn werk. Ik
+        ben niet alleen professioneel maar ook vriendelijk en betaalbaar collega.
+      </p>
     </div>
   </div>
 

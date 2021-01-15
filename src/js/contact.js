@@ -1,5 +1,5 @@
 // styles
-import "../styles/main.scss";
+import "../styles/contact_main.scss";
 // images
 import "./images/contact";
 // events

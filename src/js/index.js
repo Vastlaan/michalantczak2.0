@@ -1,5 +1,5 @@
 // styles
-import "../styles/main.scss";
+import "../styles/landing_main.scss";
 // animations
 import "./animations/landing";
 // images

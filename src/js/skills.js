@@ -1,5 +1,5 @@
 // styles
-import "../styles/main.scss";
+import "../styles/skills_main.scss";
 // images
 import "./images/skills";
 // events

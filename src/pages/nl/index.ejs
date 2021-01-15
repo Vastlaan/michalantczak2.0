@@ -1,10 +1,4 @@
-<% var item, key %>
-<% htmlWebpackPlugin.options.lang=htmlWebpackPlugin.options.lang || "en" %>
-<% htmlWebpackPlugin.options.links=htmlWebpackPlugin.options.links || [] %>
-<% htmlWebpackPlugin.options.meta=htmlWebpackPlugin.options.meta || [] %>
-<% htmlWebpackPlugin.options.scripts=htmlWebpackPlugin.options.scripts || [] %>
-
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="nl">
 
 <head>
@@ -13,13 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#222" />
   <title><%= htmlWebpackPlugin.options.title %></title>
-  <% if (Array.isArray(htmlWebpackPlugin.options.meta)) { %>
-  <% for (item of htmlWebpackPlugin.options.meta) { %>
-  <meta<% for (key in item) { %>
-  <%= key %>="<%= item[key] %>"<% } %>><% } %>
-  <% } %><% %>
-  <meta name='description' content='Flexible Webdeveloper nodig? Kies mij en onderscheid je van de concurrentie. Ik ontwerp prachtige en unieke websites, webapplicaties, webshops en online advertenties.'/>
-  
 </head>
 
 <body>
@@ -78,10 +65,10 @@
         <div class="header__info">
           <h3 class="heading-3 alhr">Web Designer & Developer</h3>
           <h1 class="heading-1 alhr">
-            Ben je op zoek naar iemand om jouw <span>developers</span> team te verrijken? 
+            Ben je op <strong>zoek</strong> naar iemand om jouw <span>developers</span> team te verrijken? 
           </h1>
           <p class="para-2 alhr">
-            Iemand die fronted- en backend-technologieën kent en
+            Iemand die frontend- en backend-technologieën kent en
             inzicht heeft in online marketingstrategieën?
             
           </p>
@@ -109,27 +96,27 @@
             <img  alt="person contemplating" id="image-1">
           </div>
           <h1 class="heading-1 black">
-            Enthousiaste web developer die al wat ervaring heeft met websites bouwen
+            Enthousiaste webontwikkelaar die al wat ervaring heeft met websites bouwen
           </h1>
           <p class="blue para-2 ">
-            Stop met verder zoeken, u bent op de juiste plek!
+            With a passion for the profession and a "let's do it" mentality.
           </p>
         </div>
 
         <div class="skills__details">
           <h3 class="heading-3 black">Overzicht van vaardigheden</h3>
           <p class="blue para-1 ">
-            Ik ontwerp functionele producten verpakt in een scherp design. Ik ben altijd up to date met moderne technologieën en ik werk volgens de beste ontwerppraktijken.
+            Ik ontwerp functionele producten verpakt in een scherp design. Ik vind het ook heel belangrijk om up to date te zijn met moderne technologieën.
           </p>
           <p class="grey para-1 ">
-          Mijn kennis van de nieuwste en populairste tools en trends zal de prestaties van uw team omhoogschieten.
+            Ik begrijp de principes van iteratieve projectontwikkeling Agile / Scrum (echter heb ik geen praktijkervaring).
           </p>
           <ul class="skills__details--list">
             <li> <span class="devicons devicons-react blue"></span> Frontend Development Tools</li>
             <li><span class="devicons devicons-npm green"></span> Backend Development Tools</li>
             <li><i class="zmdi zmdi-palette red"></i> Design Tools</li>
-            <li><span class="devicons devicons-database blue"></span> Servers & Databases</li>
-            <li><span class="devicons devicons-git black"></span> Docker, Git & veel meer...</li>
+            <li><span class="devicons devicons-database blue"></span> Cloud oplossingen en Linux VPS</li>
+            <li><span class="devicons devicons-git black"></span>Git, Docker en nog meer...</li>
           </ul>
           <div class="skills__details--btn">
             <button class="button-primary btn-skills als1btn"><span>Lees verder...</span></button>
@@ -155,30 +142,29 @@
             Portfolio
           </h1>
           <p class='para-long grey'>
-            We<br/>
-            look at Things<br/>
-            from different Perspective<br/>
+            Ik<br/>
+            kijk naar de dingen<br/>
+            vanuit een ander Perspectief<br/>
           </p>
         </div>
 
         <div class="portfolio__center">         
             <div class="portfolio__center--str">
-              <p>Creative solution</p>
+              <p>Creatieve oplossingen</p>
             </div>
             <div class='portfolio__center--eye'>
               <a href="./portfolio.html">PORT</a>
               <a href="./portfolio.html">FOLIO</a>
             </div>
             <div class="portfolio__center--trn">
-              <p>Custom design</p>
+              <p>Op maat gemaakt</p>
             </div>
         </div>
 
         <div class="portfolio__back">
           <div class='profolio__back--text'>
             <p class='para-long grey'>        
-              Mijn werk wordt gekenmerkt door een continue ontwikkelingsproces. Projecten worden altijd met behulp van de
-              nieuweste technologieën, met passie en betrokkenheid uitgevoerd.           
+              UX-georiënteerde aanpak is altijd mijn prioriteit en ik zal mijn succes blijven afmeten aan de prestaties van mijn webistes.
             </p>
           </div>
         </div>
@@ -196,12 +182,11 @@
         <div class="slider__slide--container">
           <h3 class="heading-3">Web Designer & Developer</h3>
           <h1 class="heading-1">
-            Ben je op zoek naar iemand om jouw developers team te verrijken?
+            Ik denk <strong>constructief</strong> mee en stel <span>kritische</span> vragen
           </h1>
           <p class="para-2">
-            Iemand die fronted- en backend-technologieën kent en
-            inzicht heeft in online marketingstrategieën?
-          
+            Ik denk met de opdrachtgever mee over mogelijke oplossingen om zo efficiënt mogelijk aan de wensen van de opdrachtgever
+            te voldoen          
           </p>
           <div class="slider__slide--btns">
             <button class="button-primary btn-contact"><span>Contact</span></button>
@@ -222,8 +207,7 @@
             <h3 class="para-1 white">Michal Antczak</h3>
             <p class="para-1 grey ital">Fullstack Web Developer</p>
             <p class="para-2 ital">
-              Iemand die fronted- en backend-technologieën kent en
-              inzicht heeft in online marketingstrategieën?
+              Ik transformeer ontwerpen naar functionele interfaces op mobiel en desktop
             </p>
             <button class="button-primary btn-portfolio"><span>Portfolio</span></button>
           </div>
@@ -245,7 +229,7 @@
             <i class="zmdi zmdi-facebook blue"></i>
             <span>Facebook</span>
           </a>
-          <a href='https://facebook.com'>
+          <a href="https://wa.me/31682307051?text=Hoi!%20Wij%20zijn%20geintereseerd%20in%20samenwerking%20met%20jouw.%20Neem%20een%20contact%20met%20ons!">
             <i class="zmdi zmdi-whatsapp green"></i>
             <span>WhatsApp</span>
           </a>
@@ -254,9 +238,11 @@
         <div class="slider__slide--grid">
 
           <div class='flxcol hidesmldev'>
-            <p class="heading-1">Volg mij online, check mij <span>github</span> account of neem gewoon contact mee.</p>
-            <p class="para-1 ital">Iemand die fronted- en backend-technologieën kent en
-            inzicht heeft in online marketingstrategieën?</p>
+            <p class="heading-1">Volg mij online, check mij <span>github</span> account of neem gewoon contact met mij op.</p>
+            <p class="para-1 ital">
+              Het is belangrijk om iemand te vinden die bij uw team past. Maak met mij een kennismakingsgesprek en wie weet het, het
+              wordt een perfect match.
+            </p>
           </div>
           <div class='flxcol'>
             <h3 class='heading-1'><span>Contact:</span></h3>
@@ -279,8 +265,8 @@
   <!-- intersection -->
   <section class="intersection-1">
     <hr class='line blue' />
-    <h3 class="heading-1 white tac">Duik in mijn projecten en neem een kijkje op mijn github profile</h3>
-    <button class="button-primary btn-certificaten"><span>Certificaten</span></button>
+    <h3 class="heading-1 white tac">Duik in mijn projecten en leer mij beter kennen</h3>
+    <button class="button-primary btn-portfolio"><span>Portfolio</span></button>
   </section>
 
   <!-- footer -->
@@ -307,7 +293,7 @@
       </div>
 
       <div class="footer__info-2">
-        <p class="para-small red">Duik in mijn website, bezoek mijn social media profilen, leer mij beter kennen. Neem contact met mij en maak een afspraak voor kennismakingsgesprek.</p>
+        <p class="para-small red">Duik in mijn website, bezoek mijn social media profielen, leer mij beter kennen. Neem contact met mij en maak een afspraak voor kennismakingsgesprek.</p>
       </div>
 
       <div class="footer__btn footer__btn--home">

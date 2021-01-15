@@ -1,0 +1,32 @@
+.confirmation {
+    opacity: 0;
+    visibility: 0;
+    transform: scale(0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+
+    &__close {
+        position: absolute;
+        top: 2.7rem;
+        right: 2.7rem;
+        cursor: pointer;
+
+        i {
+            font-size: 4.7rem;
+        }
+    }
+
+    h3,
+    p {
+        text-align: center;
+    }
+}

@@ -7,6 +7,7 @@ const homeButtons = document.querySelectorAll(".btn-home");
 const portfolioButtons = document.querySelectorAll(".btn-portfolio");
 const certificatenButtons = document.querySelectorAll(".btn-certificaten");
 const skillsButtons = document.querySelectorAll(".btn-skills");
+const readButtons = document.querySelectorAll(".btn-read");
 
 contactButtons.forEach((b) => {
     b.addEventListener(
@@ -31,6 +32,14 @@ certificatenButtons.forEach((b) => {
 });
 skillsButtons.forEach((b) => {
     b.addEventListener("click", () => (window.location.href = "./skills.html"));
+});
+readButtons.forEach((btn) => {
+    btn.addEventListener("click", () =>
+        window.scrollBy({
+            top: 500,
+            behavior: "smooth",
+        })
+    );
 });
 
 // toggle menu functionality

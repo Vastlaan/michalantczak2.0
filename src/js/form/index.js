@@ -1,6 +1,16 @@
-const form = document.querySelector("#contact-form");
+import { gsap } from "gsap";
 
-console.log(TOKEN);
+const form = document.querySelector("#contact-form");
+const confirmationCloseButton = document.querySelector(".confirmation__close");
+
+confirmationCloseButton.addEventListener("click", hideConfirmation);
+
+function displayConfirmation() {
+    gsap.to(".confirmation", { autoAlpha: 1, scale: 1, duration: 0.6 });
+}
+function hideConfirmation() {
+    gsap.to(".confirmation", { autoAlpha: 0, scale: 0, duration: 0.6 });
+}
 
 function submitContactForm(e) {
     // prevent default behavior
@@ -15,7 +25,7 @@ function submitContactForm(e) {
         email,
         msg,
     };
-    console.log(data);
+
     fetch("https://itcontext.nl/api/submitContactForm", {
         method: "POST",
         headers: {
@@ -29,7 +39,7 @@ function submitContactForm(e) {
         })
         .then((d) => {
             if (d.msg === "Sucess") {
-                return console.log("Yeah");
+                displayConfirmation();
             }
         })
         .catch((e) => console.error(e));

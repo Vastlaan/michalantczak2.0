@@ -1,5 +1,5 @@
 // styles
-import "../styles/main.scss";
+import "../styles/certificaten_main.scss";
 // images
 import "./images/certificaten";
 // events

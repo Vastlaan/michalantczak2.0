@@ -1,9 +1,3 @@
-<% var item, key %>
-<% htmlWebpackPlugin.options.lang=htmlWebpackPlugin.options.lang || "en" %>
-<% htmlWebpackPlugin.options.links=htmlWebpackPlugin.options.links || [] %>
-<% htmlWebpackPlugin.options.meta=htmlWebpackPlugin.options.meta || [] %>
-<% htmlWebpackPlugin.options.scripts=htmlWebpackPlugin.options.scripts || [] %>
-
 <!DOCTYPE html>
 <html lang="nl">
 
@@ -15,13 +9,6 @@
   <title>
     <%= htmlWebpackPlugin.options.title %>
   </title>
-  <% if (Array.isArray(htmlWebpackPlugin.options.meta)) { %>
-  <% for (item of htmlWebpackPlugin.options.meta) { %>
-  <meta<% for (key in item) { %>
-  <%= key %>="<%= item[key] %>"<% } %>><% } %>
-  <% } %>
-  <% %>
-
 </head>
 
 <body>
@@ -76,8 +63,9 @@
         </div>
         <div class="sklheader__main">
           <h3 class="heading-1">Mijn kennis van de nieuwste <strong>technologieën</strong> en trends zal de prestaties van uw team <span>omhoogschieten</span></h3>
-          <p class="para-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, eveniet.</p>
-          <button class="button-primary"><span>Lees verder</span></button>
+          <p class="para-2">Ik ben op de hoogte hoe belangrijk het is om te blijven leren en niet te stoppen met het ontwikkelen van mijn
+          vaardigheden in de dynamisch veranderende wereld van technologie.</p>
+          <button class="button-primary btn-read"><span>Lees verder...</span></button>
         </div>
       </div>
     </div>
@@ -89,165 +77,169 @@
   <main class="sklmain">
     <div class="container-narrow">
       <ul class="sklmain__nav">
-        <li>All</li>
+        <li>Alles</li>
         <li>Frontend Tools</li>
         <li>Backend Tools</li>
-        <li>Other Tools</li>
+        <li>Andere Tools</li>
       </ul>
       <div class="sklmain__list">
         <div class="sklmain__list--tool" data-cat="1">
           <p class="heading-1">HTML5</p>
           <span class="devicons devicons-html5 blue"></span>
-          <p class="para-1">I write cross-browser reusable markup code including new semantics, canvas, multimedia tags and much more.</p>
+          <p class="para-1">Ik schrijf cross-browser herbruikbare code met nieuwe semantiek, inclusief canvas, multimediatags en nog veel meer.</p>
         </div>
         <div class="sklmain__list--tool" data-cat="1">
           <p class="heading-1">CSS3</p>
           <span class="devicons devicons-css3" style='color: orangered'></span>
           <p class="para-1">
-            I'm very flexible in CSS, making layouts with using flexbox, grid or floats. I improve my designs with fancy animations and
-            transitions. I write the code with BEM notiation or styled-components as well as CSS modules or CSS in JavaScript.
+            Ik ben flexibel in het maken van CSS-lay-outs met behulp van Flexbox en Grid. Mijn ontwerpen verpak ik in mooie
+            animaties en transitions. Ik schrijf de code met BEM-notificatie of styled-components, evenals CSS-modules en CSS in
+            JavaScript.
           </p>
         </div>
         <div class="sklmain__list--tool" data-cat="1">
           <p class="heading-1">Sass</p>
           <span class="devicons devicons-sass" style='color: purple'></span>
           <p class="para-1">
-          This CSS preprocessor comes with powerful functionality. I know how to use functions, mixins, interpolations, @content
-          and @import directives, reference symbol '&' and much more.
+          Deze CSS-preprocessor wordt geleverd met krachtige functionaliteit. Ik ken onder andere: functies, mixins,
+          interpolaties, @content en @import directives, verwijzingssymbool '&'.
           </p>
         </div>
         <div class="sklmain__list--tool" data-cat="1">
           <p class="heading-1">JavaScript</p>
           <span class="devicons devicons-javascript_badge" style='color: goldenrod'></span>
           <p class="para-1">
-            I'm quite fluent in JavaScript using modern EcmaScript (at least 2016) syntax among others: rest/spread properties and
-            asynchronous iteration.
+            Ik ben vrij vloeiend in JavaScript. Ik gebruik moderne EcmaScript syntax (tenminste 2016) en ik zorg op leesbaar, kort
+            en functioneel code.
           </p>
         </div>
         <div class="sklmain__list--tool" data-cat="1">
           <p class="heading-1">React</p>
           <span class="devicons devicons-react" style='color: skyblue'></span>
           <p class="para-1">
-            This modern framework is my favorite tool. I feel comfortable with both functional and class based components, React
-            Redux, React Router and many related libraries, including most popular frontend frameworks build on React like: <strong>Next</strong> and <strong>GatsbyJs</strong> .
+            Dit moderne framework is mijn favoriete tool. Ik voel me comfortabel met zowel functionele als op klassen gebaseerde
+            componenten, React Redux, React Router en vele gerelateerde bibliotheken, waaronder de meest populaire
+            frontend-frameworks die op basis van React zijn gebouwd, zoals: <strong>NextJs</strong> en <strong>GatsbyJs</strong> .
           </p>
         </div>
         <div class="sklmain__list--tool" data-cat="2">
           <p class="heading-1">NodeJs</p>
           <span class="devicons devicons-nodejs" style='color: darkgreen'></span>
           <p class="para-1">
-            I make use of NodeJs with Express to build functional RESTful APIs. I can design and create almost every desired backend
-            functionality.
+            Ik maak gebruik van NodeJs met Express om functionele RESTful API's te bouwen. Ik kan bijna elke gewenste
+            backend-functionaliteit ontwerpen en maken.
           </p>
         </div>
         <div class="sklmain__list--tool" data-cat="2">
           <p class="heading-1">NginX</p>
           <span class="devicons devicons-nginx" style='color: darkgreen'></span>
           <p class="para-1">
-            Most of the time I use Nginx as a reverse proxy server, but can also use it as a backend server to handle incoming
-            requests.
+          Meestal gebruik ik Nginx als een reverse proxyserver, maar ik kan het ook gebruiken als een backend-server om inkomende
+          requests te handelen.
           </p>
         </div>
         <div class="sklmain__list--tool" data-cat="3">
           <p class="heading-1">Linux OS</p>
           <span class="devicons devicons-linux blue"></span>
           <p class="para-1">
-            I worked with Virtual Private Servers based on Linux OS. I know its structure, commands and basics of Bash scripting
-            language.
+            Ik werkte met Virtual Private Servers op basis van Linux OS. Ik ken de structuur, commands en basisprincipes van
+            Bash-scripttaal.
           </p>
         </div>
         <div class="sklmain__list--tool" data-cat="2">
           <p class="heading-1">MongoDB</p>
           <span class="devicons devicons-mongodb green"></span>
           <p class="para-1">
-            Based on MongoDB relational database I've built my most complex web application for chefs: <a href='https://chefsbook.org'>chefsbook.org</a>
+            Op basis van de relationele database van MongoDB heb ik mijn meest complexe webapplicatie voor chef-koks gebouwd: <a href='https://chefsbook.org'>chefsbook.org</a>
           </p>
         </div>
         <div class="sklmain__list--tool" data-cat="2">
           <p class="heading-1">Postgresql</p>
           <span class="devicons devicons-postgresql" style='color: skyblue'></span>
           <p class="para-1">
-            I'm most fluent in good old open source PostgreSQL. Tables creations, insertions, updates, altering, transactions and
-            much more SQL syntax is familiar to me.
+            Ik ben het meest vloeiend in de goede oude open source PostgreSQL. Inserts updates, alters, transacties en nog veel meer
+            SQL-syntaxis is mij bekend.
           </p>
         </div>
         <div class="sklmain__list--tool" data-cat="3">
           <p class="heading-1">Github</p>
           <span class="devicons devicons-github_badge" style='color: purple'></span>
           <p class="para-1">
-          Not forgeting about most popular version control GitHub. I practiced a lot of adding, commiting, pushing, forking
-          cloning, branching, merging, rebasing, making pull requests, reseting head (soft or hard), stashing and its other
-          functionality.
+          Niet te vergeten de meest populaire versiebeheer GitHub. Ik heb veel geoefend met adding, commiting, pushing, forking
+          cloning, branching, merging, rebasing, making pull requests, reseting head (soft or hard), stashing en de andere
+          functionaliteit.
           </p>
         </div>
         <div class="sklmain__list--tool" data-cat="3">
           <p class="heading-1">AWS</p>
           <span class="devicons devicons-aws gold"></span>
           <p class="para-1">
-            I have experience using AWS EC2 instances as well as Load Balancers, S3 buckets and more.
+            Ik heb ervaring met het gebruik van AWS EC2-instances, evenals met Load Balancers, S3-buckets en meer.
           </p>
         </div>
         <div class="sklmain__list--tool" data-cat="1">
           <p class="heading-1">Figma</p>
           <img alt="figma logo" id='figma-logo' width='47' height='47'>
           <p class="para-1">
-            Modern design tool resembling Sketch or Adobe XD. I use it to design my projects.
+            Moderne ontwerptool die lijkt op Sketch of Adobe XD. Ik gebruik het om mijn projecten te ontwerpen.
           </p>
         </div>
         <div class="sklmain__list--tool" data-cat="1">
           <p class="heading-1">Webpack 5</p>
           <img alt="webpack logo" id='webpack-logo' width='47' height='47'>
           <p class="para-1">
-            Popular module bundler. I grasp the concepts of loaders, plugins and I'm able to build the modern JavaScript application.
+            Populaire modulebundler. Ik begrijp de concepten van laders, plug-ins en ik kan de moderne JavaScript-applicatie bouwen.
           </p>
         </div>
         <div class="sklmain__list--tool" data-cat="1">
           <p class="heading-1">NextJs</p>
           <img alt="next logo" id='next-logo' width='47' height='47'>
           <p class="para-1">
-            Popular build on React frontend framework to generate static websites with SSR.
+            Populair gebouwd op React frontend framework om statische websites met SSR te genereren.
           </p>
         </div>
         <div class="sklmain__list--tool" data-cat="1">
           <p class="heading-1">GraphQL</p>
           <img alt="graphql logo" id='graphql-logo' width='47' height='47'>
           <p class="para-1">
-            Popular query language - used to retriving data from database in more efficient way. I use it most of the time with GatsbyJs, where it is build in functionality to query the data.
+            Populaire querytaal - wordt gebruikt om op een efficiëntere manier gegevens uit de database op te halen. Ik gebruik het
+            meestal met GatsbyJs, waar het ingebouwde functionaliteit heeft om de gegevens op te vragen.
           </p>
         </div>
         <div class="sklmain__list--tool" data-cat="1">
           <p class="heading-1">TypeScript</p>
           <img alt="typescript logo" id='typescript-logo' width='47' height='47'>
           <p class="para-1">
-            Superset of JavaScript used for better development experience. I fully understand its concepts of data types floating through application, interfaces and more.
+            Superset van JavaScript gebruikt voor een betere ontwikkelervaring. Ik begrijp volledig de concepten van gegevenstypen
+            die door applicaties, interfaces en meer zweven.
           </p>
         </div>
         <div class="sklmain__list--tool" data-cat="1">
           <p class="heading-1">Jest</p>
           <img alt="jest logo" id='jest-logo' width='47' height='47'>
           <p class="para-1">
-            Unit test library - used to test webapplications.
+            Unit-testbibliotheek - gebruikt om webapplicaties te testen.
           </p>
         </div>
         <div class="sklmain__list--tool" data-cat="2">
           <p class="heading-1">JAVA</p>
           <span class="devicons devicons-java" style='color: orangered'></span>
           <p class="para-1">
-            I have basic understanding of JAVA Object Oriented approach of building simple programs in NetBeans.
+            Ik heb basiskennis van JAVA Object Oriented benadering van het bouwen van eenvoudige programma's in NetBeans.
           </p>
         </div>
         <div class="sklmain__list--tool" data-cat="1">
           <p class="heading-1">Gatsby</p>
           <img alt="gatsby logo" id='gatsby-logo' width='47' height='47'>
           <p class="para-1">
-            Popular build on React frontend framework to generate static websites.
+            Populair gebouwd op React frontend framework om statische websites te genereren.
           </p>
         </div>
         <div class="sklmain__list--tool" data-cat="3">
           <p class="heading-1">Docker</p>
           <span class="devicons devicons-docker blue"></span>
           <p class="para-1">
-            I know basic topics related to Docker and Kubernetes.
+            Ik ken basisonderwerpen met betrekking tot Docker en Kubernetes.
           </p>
         </div>
         
@@ -260,9 +252,9 @@
     <hr class='line blue' />
     <h3 class="heading-1 white tac">Servers & Cloud Computing</h3>
     <p class="para-1 tac">
-      Cloud solutions are improving accessibility and performance of modern API's.
-      I have experience with both AWS EC2 instances and DigitalOcean droplets. Based on Linux OS I can bring to live many
-      kinds of API's, websites and databases.
+      Cloudoplossingen verbeteren de toegankelijkheid en prestaties van moderne API's. Ik heb ervaring met zowel AWS
+      EC2-instances als DigitalOcean droplets. Op basis van Linux OS kan ik vele soorten API's, websites en databases tot
+      leven brengen.
     </p>
   </section>
 

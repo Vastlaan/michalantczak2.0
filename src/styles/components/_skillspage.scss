@@ -140,10 +140,13 @@
         &--tool {
             margin: 1.4rem;
             padding: 1.4rem;
-            max-width: 26rem;
             display: flex;
             flex-direction: column;
             align-items: center;
+
+            @include respond("m") {
+                max-width: 26rem;
+            }
 
             p {
                 margin-bottom: 1.4rem;

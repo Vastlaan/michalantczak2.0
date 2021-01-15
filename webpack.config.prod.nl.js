@@ -1,13 +1,13 @@
 const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-// const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
     // which environment is this file applying to
-    mode: "development",
+    mode: "production",
 
     // which files to track
     entry: {
@@ -16,19 +16,6 @@ module.exports = {
         skills: "./src/js/skills.js",
         certificaten: "./src/js/certificaten.js",
         portfolio: "./src/js/portfolio.js",
-    },
-
-    // use build in source map to track files in the bundle
-    devtool: "inline-source-map",
-
-    // development server configuration
-    devServer: {
-        // specify source directory
-        // publicPath: "./dist",
-        contentBase: "./dist/nl",
-        host: "0.0.0.0", //your ip address
-        port: 8080,
-        disableHostCheck: true,
     },
 
     // filename and directory where files are compiled to
@@ -62,7 +49,6 @@ module.exports = {
                             publicPath: "",
                         },
                     },
-
                     "css-loader",
                     {
                         loader: "sass-loader",
@@ -115,7 +101,7 @@ module.exports = {
                 {
                     name: "description",
                     content:
-                        "Webdeveloper nodig? Kies mij en onderscheid je van de concurrentie. Ik ontwerp voor je een prachtige en unieke websites, webapplicaties, webshops en online advertenties.",
+                        "Web developer nodig? Kies mij en onderscheid je van de concurrentie. Ik ontwerp voor je een prachtige en unieke websites, webapplicaties, webshops en online advertenties.",
                 },
                 {
                     name: "robots",
@@ -132,7 +118,7 @@ module.exports = {
                 {
                     name: "og:description",
                     content:
-                        "Webdeveloper nodig? Kies mij en onderscheid je van de concurrentie. Ik ontwerp voor je een prachtige en unieke websites, webapplicaties, webshops en online advertenties.",
+                        "Web developer nodig? Kies mij en onderscheid je van de concurrentie. Ik ontwerp voor je een prachtige en unieke websites, webapplicaties, webshops en online advertenties.",
                 },
                 {
                     name: "og:image",
@@ -156,7 +142,7 @@ module.exports = {
                 {
                     name: "description",
                     content:
-                        "Neem contact met mij op. Vul onderstande formulier of bel: (+31) (0) 6 82 30 70 51  of stuur mij een e-mail: info@michalantczak.com",
+                        "Neem contact met mij op. Vul onderstaande formulier of bel: (+31) (0) 6 82 30 70 51  of stuur mij een e-mail: info@michalantczak.com",
                 },
                 {
                     name: "robots",
@@ -197,7 +183,7 @@ module.exports = {
                 {
                     name: "description",
                     content:
-                        "Ontdek welke programeur talen, frameworks en andere webtools ken ik best. Gebruik je gelijke technologieen in jouw projecten? Prima! Ik kan voor je direct aan de slag!",
+                        "Ontdek welke programmeertalen, frameworks en andere webtools ken ik best. Gebruik je gelijke technologieen in jouw projecten? Prima! Ik kan voor je direct aan de slag!",
                 },
                 {
                     name: "robots",
@@ -214,7 +200,7 @@ module.exports = {
                 {
                     name: "og:description",
                     content:
-                        "Ontdek welke programeur talen, frameworks en andere webtools ken ik best. Gebruik je gelijke technologieen in jouw projecten? Prima! Ik kan voor je direct aan de slag!",
+                        "Ontdek welke programmeertalen, frameworks en andere webtools ken ik best. Gebruik je gelijke technologieen in jouw projecten? Prima! Ik kan voor je direct aan de slag!",
                 },
                 {
                     name: "og:image",

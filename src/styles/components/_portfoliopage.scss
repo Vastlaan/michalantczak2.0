@@ -154,7 +154,7 @@
 
         @include respond("m") {
             flex-direction: row;
-            align-items: flex-start;
+            align-items: stretch;
         }
 
         &--img {

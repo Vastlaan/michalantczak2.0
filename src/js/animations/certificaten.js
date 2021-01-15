@@ -18,12 +18,26 @@ gsap.from(".certheader__main > *", {
 });
 
 ScrollTrigger.batch(".folder--file", {
+    interval: 0.1, // time window (in seconds) for batching to occur.
+    batchMax: 3, // maximum batch size (targets). Can be function-based for dynamic values
     onEnter: (batch) =>
-        gsap.from(batch, {
-            autoAlpha: 0,
-            y: 100,
-            stagger: 0.25,
+        gsap.to(batch, {
+            opacity: 1,
+            y: 0,
+            stagger: { each: 0.15, grid: [1, 3] },
+            overwrite: true,
         }),
+    onLeave: (batch) =>
+        gsap.set(batch, { opacity: 0, y: -100, overwrite: true }),
+    onEnterBack: (batch) =>
+        gsap.to(batch, { opacity: 1, y: 0, stagger: 0.15, overwrite: true }),
+    onLeaveBack: (batch) =>
+        gsap.set(batch, { opacity: 0, y: 100, overwrite: true }),
+    start: "20px bottom",
+    end: "top top",
 });
+ScrollTrigger.addEventListener("refreshInit", () =>
+    gsap.set(".folder-file", { y: 0 })
+);
 
 gsap.from(".about", slideFromDown(".about"));

@@ -1,9 +1,3 @@
-<% var item, key %>
-<% htmlWebpackPlugin.options.lang=htmlWebpackPlugin.options.lang || "en" %>
-<% htmlWebpackPlugin.options.links=htmlWebpackPlugin.options.links || [] %>
-<% htmlWebpackPlugin.options.meta=htmlWebpackPlugin.options.meta || [] %>
-<% htmlWebpackPlugin.options.scripts=htmlWebpackPlugin.options.scripts || [] %>
-
 <!DOCTYPE html>
 <html lang="nl">
 
@@ -15,13 +9,6 @@
   <title>
     <%= htmlWebpackPlugin.options.title %>
   </title>
-  <% if (Array.isArray(htmlWebpackPlugin.options.meta)) { %>
-    <% for (item of htmlWebpackPlugin.options.meta) { %>
-      <meta<% for (key in item) { %>
-        <%= key %>="<%= item[key] %>"<% } %>><% } %>
-                <% } %>
-                  <% %>
-
 </head>
 
 <body>
@@ -45,7 +32,7 @@
           <li>Portfolio</li>
         </a>
         <a href="./certificaten.html">
-          <li>Certificaten</li>
+          <li>Certificates</li>
         </a>
         <a href="./contact.html">
           <li>Contact</li>
@@ -68,13 +55,7 @@
 
     <img  alt="website decoration" id='image-decoration-9'/>
     <div class="contact__grid">
-      
-      <!-- <svg id='image-decoration-10' viewBox="0 0 415 592" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="0.707107" y="383.57" width="292.449" height="150.449" transform="rotate(-45 0.707107 383.57)"
-          stroke="#222" stroke-opacity="0.5" />
-        <rect x="0.707107" y="207.5" width="292.449" height="150.449" transform="rotate(-45 0.707107 207.5)"
-          stroke="#222" />
-      </svg> -->
+
       <svg id='image-decoration-10' width="502" height="202" viewBox="0 0 502 202" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd"
           d="M201 50.9996L200.992 50.9996L200.97 51L200.932 51.0009L200.88 51.0028L200.813 51.0058L200.73 51.0104L200.633 51.0167L200.522 51.0251L200.395 51.0359L200.254 51.0493L200.099 51.0657L199.929 51.0854L199.745 51.1085L199.547 51.1354L199.334 51.1664L199.108 51.2018L198.869 51.2417L198.615 51.2865L198.349 51.3364L198.069 51.3916L197.776 51.4525L197.471 51.5192L197.153 51.592L196.823 51.6711L196.48 51.7567L196.126 51.8491L195.76 51.9484L195.383 52.0549L194.994 52.1687L194.595 52.29L194.185 52.419L193.765 52.5559L193.335 52.7009L192.895 52.854L192.446 53.0154L191.988 53.1854L191.52 53.3639L191.045 53.5512L190.561 53.7473L190.069 53.9523L189.57 54.1663L189.063 54.3895L188.55 54.6218L188.03 54.8634L187.504 55.1142L186.972 55.3745L186.435 55.6441L185.892 55.9231L185.345 56.2115L184.793 56.5093L184.238 56.8166L183.678 57.1333L183.115 57.4594L182.549 57.7948L181.98 58.1395L181.41 58.4935L180.837 58.8567L180.262 59.229L179.686 59.6103L179.11 60.0006L178.533 60.3997L177.955 60.8075L177.378 61.2239L176.802 61.6488L176.226 62.0821L175.651 62.5235L175.078 62.9729L174.507 63.4302L173.937 63.8952L173.371 64.3676L172.807 64.8474L172.246 65.3342L171.689 65.8279L171.135 66.3283L170.586 66.8351L170.041 67.3481L169.5 67.8671L168.965 68.3917L168.434 68.9218L167.909 69.4571L167.389 69.9973L166.876 70.5422L166.369 71.0913L165.868 71.6446L165.374 72.2015L164.886 72.762L164.406 73.3256L163.933 73.892L163.467 74.4609L163.009 75.0321L162.559 75.6051L162.117 76.1796L161.683 76.7554L161.258 77.332L160.841 77.9092L160.432 78.4865L160.032 79.0637L159.641 79.6404L159.259 80.2161L158.886 80.7907L158.522 81.3638L158.168 81.9348L157.822 82.5037L157.486 83.0698L157.159 83.633L156.842 84.1929L156.534 84.749L156.235 85.3011L155.946 85.8488L155.666 86.3917L155.396 86.9295L155.135 87.4618L154.883 87.9883L154.641 88.5086L154.408 89.0225L154.184 89.5295L153.969 90.0293L153.763 90.5217L153.567 91.0062L153.379 91.4825L153.2 91.9504L153.029 92.4095L152.867 92.8595L152.713 93.3001L152.567 93.731L152.43 94.1519L152.3 94.5626L152.178 94.9627L152.064 95.3519L151.957 95.7301L151.857 96.0969L151.764 96.4521L151.678 96.7955L151.598 97.1268L151.525 97.4458L151.458 97.7522L151.397 98.0459L151.341 98.3267L151.291 98.5943L151.245 98.8486L151.205 99.0894L151.169 99.3166L151.138 99.5299L151.111 99.7292L151.087 99.9145L151.067 100.085L151.051 100.242L151.037 100.384L151.026 100.512L151.018 100.625L151.011 100.723L151.006 100.806L151.003 100.875L151.001 100.928L151 100.967L151 100.991L151 101L151 100.993L150.999 100.972L150.999 100.936L150.997 100.884L150.994 100.818L150.989 100.737L150.983 100.641L150.975 100.531L150.964 100.406L150.951 100.266L150.935 100.111L150.916 99.9427L150.893 99.7597L150.866 99.5626L150.836 99.3515L150.801 99.1265L150.761 98.8879L150.717 98.6357L150.667 98.3702L150.612 98.0915L150.552 97.7999L150.486 97.4954L150.413 97.1784L150.335 96.8491L150.25 96.5076L150.158 96.1543L150.059 95.7893L149.953 95.4129L149.84 95.0254L149.719 94.627L149.591 94.218L149.455 93.7987L149.31 93.3694L149.158 92.9303L148.997 92.4818L148.828 92.0241L148.65 91.5576L148.463 91.0826L148.268 90.5994L148.064 90.1083L147.85 89.6096L147.628 89.1037L147.396 88.5909L147.156 88.0716L146.905 87.546L146.646 87.0146L146.377 86.4777L146.099 85.9356L145.811 85.3886L145.514 84.8372L145.208 84.2817L144.892 83.7224L144.566 83.1598L144.232 82.594L143.888 82.0256L143.534 81.4548L143.172 80.8821L142.8 80.3077L142.42 79.7321L142.03 79.1556L141.632 78.5785L141.225 78.0011L140.809 77.4239L140.385 76.8472L139.952 76.2713L139.511 75.6965L139.063 75.1232L138.606 74.5518L138.142 73.9825L137.67 73.4156L137.19 72.8515L136.704 72.2906L136.211 71.733L135.711 71.1792L135.205 70.6293L134.692 70.0838L134.174 69.5428L133.65 69.0068L133.12 68.4758L132.585 67.9503L132.045 67.4304L131.501 66.9164L130.952 66.4086L130.399 65.9072L129.842 65.4124L129.282 64.9244L128.719 64.4435L128.153 63.9699L127.584 63.5037L127.013 63.0452L126.44 62.5945L125.866 62.1518L125.29 61.7173L124.713 61.291L124.136 60.8732L123.559 60.464L122.982 60.0635L122.405 59.6719L121.829 59.2891L121.254 58.9154L120.681 58.5507L120.11 58.1953L119.541 57.8491L118.975 57.5122L118.411 57.1846L117.851 56.8664L117.295 56.5577L116.742 56.2583L116.194 55.9684L115.651 55.6879L115.113 55.4168L114.58 55.1551L114.053 54.9027L113.532 54.6596L113.018 54.4258L112.51 54.2012L112.01 53.9858L111.517 53.7793L111.031 53.5818L110.554 53.3932L110.086 53.2132L109.626 53.0419L109.175 52.8791L108.734 52.7247L108.302 52.5785L107.881 52.4403L107.469 52.31L107.068 52.1875L106.678 52.0725L106.299 51.9649L105.931 51.8644L105.575 51.771L105.231 51.6843L104.899 51.6042L104.579 51.5304L104.271 51.4627L103.976 51.401L103.695 51.3448L103.426 51.2941L103.171 51.2485L102.929 51.2078L102.7 51.1718L102.486 51.1401L102.286 51.1125L102.099 51.0888L101.927 51.0686L101.769 51.0517L101.626 51.0378L101.497 51.0266L101.383 51.0179L101.284 51.0112L101.199 51.0064L101.129 51.0032L101.075 51.0011L101.035 51.0001L101.01 50.9996L101 50.9996L101.005 50.9995L101.025 50.9993L101.06 50.9984L101.11 50.9967L101.175 50.9939L101.255 50.9896L101.35 50.9836L101.459 50.9755L101.583 50.9652L101.722 50.9522L101.875 50.9362L102.043 50.9171L102.225 50.8946L102.421 50.8683L102.631 50.8379L102.854 50.8033L103.092 50.7641L103.343 50.7201L103.608 50.6711L103.885 50.6167L104.176 50.5567L104.479 50.4909L104.795 50.4191L105.124 50.3411L105.464 50.2565L105.817 50.1652L106.181 50.067L106.556 49.9617L106.943 49.8491L107.34 49.729L107.748 49.6012L108.167 49.4656L108.595 49.3219L109.034 49.1701L109.482 49.01L109.938 48.8414L110.404 48.6642L110.879 48.4784L111.361 48.2837L111.852 48.0801L112.35 47.8675L112.855 47.6458L113.367 47.415L113.886 47.1749L114.411 46.9255L114.942 46.6668L115.479 46.3987L116.02 46.1211L116.567 45.8342L117.118 45.5379L117.673 45.2321L118.232 44.9169L118.795 44.5923L119.36 44.2584L119.928 43.9151L120.499 43.5626L121.072 43.2009L121.646 42.8301L122.221 42.4502L122.798 42.0613L123.375 41.6636L123.952 41.2572L124.53 40.8421L125.106 40.4185L125.682 39.9866L126.257 39.5465L126.831 39.0983L127.402 38.6423L127.972 38.1785L128.539 37.7073L129.103 37.2287L129.664 36.7429L130.222 36.2503L130.776 35.751L131.326 35.2452L131.872 34.7331L132.414 34.2151L132.95 33.6913L133.481 33.1621L134.007 32.6276L134.528 32.0882L135.042 31.5441L135.551 30.9956L136.053 30.443L136.548 29.8866L137.036 29.3266L137.518 28.7635L137.992 28.1975L138.459 27.629L138.918 27.0582L139.369 26.4854L139.813 25.9111L140.248 25.3355L140.675 24.759L141.093 24.1819L141.503 23.6046L141.904 23.0274L142.297 22.4506L142.68 21.8746L143.055 21.2998L143.42 20.7265L143.776 20.1551L144.123 19.5859L144.461 19.0193L144.789 18.4556L145.108 17.8952L145.417 17.3384L145.718 16.7857L146.008 16.2373L146.29 15.6936L146.561 15.155L146.824 14.6218L147.077 14.0943L147.321 13.573L147.555 13.058L147.781 12.5499L147.997 12.0489L148.204 11.5554L148.402 11.0696L148.592 10.5919L148.772 10.1227L148.944 9.66215L149.108 9.21068L149.263 8.76856L149.41 8.3361L149.548 7.91358L149.679 7.50128L149.802 7.09949L149.918 6.70849L150.026 6.32854L150.127 5.9599L150.221 5.60281L150.308 5.25754L150.389 4.92431L150.463 4.60335L150.531 4.29489L150.594 3.99913L150.65 3.71629L150.701 3.44655L150.747 3.19011L150.789 2.94714L150.825 2.71782L150.857 2.50229L150.885 2.30071L150.909 2.11323L150.929 1.93996L150.946 1.78104L150.961 1.63657L150.972 1.50666L150.981 1.39138L150.988 1.29084L150.993 1.20509L150.996 1.13419L150.998 1.0782L150.999 1.03716L151 1.01108L151 1L151 1.00392L151 1.02283L151.001 1.05672L151.002 1.10558L151.005 1.16936L151.009 1.24802L151.015 1.3415L151.023 1.44975L151.033 1.57268L151.046 1.7102L151.062 1.86223L151.081 2.02866L151.103 2.20937L151.129 2.40423L151.159 2.61311L151.193 2.83586L151.232 3.07233L151.276 3.32236L151.324 3.58576L151.378 3.86237L151.438 4.15198L151.503 4.4544L151.574 4.76941L151.652 5.09681L151.736 5.43635L151.827 5.78783L151.924 6.15098L152.029 6.52556L152.141 6.91131L152.261 7.30798L152.388 7.71529L152.523 8.13296L152.666 8.56071L152.817 8.99825L152.976 9.44529L153.144 9.90152L153.321 10.3666L153.506 10.8403L153.7 11.3223L153.903 11.8121L154.115 12.3096L154.336 12.8144L154.566 13.3261L154.805 13.8444L155.054 14.369L155.312 14.8995L155.579 15.4356L155.856 15.9769L156.142 16.5231L156.438 17.0738L156.743 17.6287L157.057 18.1874L157.381 18.7496L157.714 19.3148L158.057 19.8828L158.408 20.4533L158.769 21.0257L159.139 21.5998L159.519 22.1753L159.907 22.7517L160.304 23.3287L160.71 23.9061L161.124 24.4833L161.547 25.0601L161.978 25.6362L162.418 26.2112L162.865 26.7847L163.32 27.3565L163.784 27.9262L164.254 28.4934L164.732 29.058L165.218 29.6194L165.71 30.1776L166.208 30.732L166.714 31.2825L167.225 31.8288L167.743 32.3705L168.266 32.9073L168.795 33.4391L169.329 33.9656L169.868 34.4864L170.412 35.0013L170.96 35.5101L171.512 36.0125L172.068 36.5084L172.628 36.9975L173.191 37.4795L173.757 37.9543L174.325 38.4217L174.896 38.8814L175.468 39.3334L176.043 39.7774L176.618 40.2132L177.194 40.6408L177.772 41.0599L178.349 41.4705L178.926 41.8724L179.503 42.2655L180.079 42.6497L180.654 43.0249L181.227 43.3909L181.799 43.7479L182.368 44.0955L182.935 44.4339L183.499 44.763L184.06 45.0827L184.617 45.3929L185.17 45.6938L185.719 45.9852L186.263 46.2672L186.802 46.5398L187.335 46.803L187.863 47.0569L188.385 47.3014L188.901 47.5367L189.409 47.7627L189.911 47.9797L190.405 48.1876L190.891 48.3865L191.37 48.5765L191.84 48.7578L192.301 48.9305L192.753 49.0946L193.196 49.2504L193.629 49.3979L194.053 49.5374L194.466 49.6689L194.868 49.7927L195.26 49.9088L195.641 50.0176L196.011 50.1192L196.369 50.2137L196.715 50.3015L197.049 50.3826L197.371 50.4574L197.68 50.526L197.977 50.5887L198.261 50.6458L198.532 50.6973L198.789 50.7437L199.033 50.7852L199.264 50.8219L199.48 50.8543L199.683 50.8825L199.872 50.9068L200.046 50.9275L200.206 50.9449L200.352 50.9593L200.483 50.9709L200.599 50.98L200.701 50.987L200.788 50.9921L200.86 50.9955L200.917 50.9977L200.96 50.9989L200.987 50.9995L200.999 50.9996L201 50.9996Z"
@@ -122,40 +103,38 @@
       
       <div class="contact__details">
         <img id="image-logo-3" class='hidesmldev' alt="logo" width='74' height='74'>
-        <h3 class="heading-2 white"><span>Contact</span> Gegevens</h3>
+        <h3 class="heading-2 white"><span>Contact</span> Details</h3>
         <div class="contact__details--field">
-          <p class="para-small">Stuur mij een e-mail:</p>
+          <p class="para-small">Send me an e-mail:</p>
           <a href="mailto:info@michalantczak.com">info@michalantczak.com</a>
         </div>
         <div class="contact__details--field">
-          <p class="para-small">Of dit e-mail:</p>
+          <p class="para-small">Or this e-mail:</p>
           <a href="mailto:info@itcontext.nl">info@itcontext.nl</a>
         </div>
         <div class="contact__details--field">
-          <p class="para-small">Mobiel:</p>
+          <p class="para-small">Mobile:</p>
           <a href="tel:0031682307051">(+31) (0)6 82 30 70 51</a>
         </div>
         <div class="contact__details--field">
-          <p class="para-small">Telefoon:</p>
+          <p class="para-small">Phone:</p>
           <a href="tel:0031299705072">(0) 299 70 50 72</a>
         </div>
         <div class="contact__details--field">
           <p class="para-small blue">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur illo atque quas. 
-            Adipisci modi labore suscipit, deserunt quisquam optio doloribus quas autem aliquam ipsam veniam, delectus sequi cum cupiditate exercitationem quia. 
-            Dignissimos, aut?</p>
+            Do you have a question? Feel free to contact me using the contact details above.</p>
         </div>
       </div>
 
       <form id='contact-form' class="contact__form">
         <h3 class="heading-2 black"><span>Contact</span> Formulier</h3>
-        <p class="para-small">Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-          Doloribus, est veniam. Quas velit explicabo architecto error excepturi minima dolore expedita. 
-          Quaerat saepe ipsam earum explicabo sed officiis modi necessitatibus non.
+        <p class="para-small">
+          Do you have a question or comment? Fill in the contact form below, I will answer your question as soon as possible. Do
+          you have a question about my services? Please state it in the form below:
         </p>
         <div class='contact__form--inputs'>
           <div class="contact__form--inputs-i">
-            <label for="name">Naam:</label>
+            <label for="name">Name:</label>
             <input type="text" id="name" name='name' placeholder='Jouw naam' required>
           </div>
           <div class="contact__form--inputs-i">
@@ -164,12 +143,12 @@
           </div>
         </div>
         <div class="contact__form--message">
-          <label for="message">Bericht:</label>
+          <label for="message">Message:</label>
           <textarea name="message" id="message" cols="30" rows="5" placeholder="Stel je vraag hier..." required></textarea>
         </div>
-        <p class="para-small blue">Bij het versturen van dit formulier geef ik toestemming dat deze gegevens mogen worden gebruikt.
-        Mijn gegevens zullen niet worden gebruikt voor andere doeleinden en niet worden verstrekt aan derden.</p>
-        <button class='button-secondary' type='submit'>Versturen</button>
+        <p class="para-small blue">By submitting this form, I agree that this data may be used only for processing this question. My data will not be used
+        for other purposes and will not be provided to third parties.</p>
+        <button class='button-secondary' type='submit'>Send</button>
       </form>
     </div>
   </section>
@@ -177,7 +156,7 @@
   <!-- intersection -->
   <section class="intersection-1">
     <hr class='line blue' />
-    <h3 class="heading-1 white tac">je kan ook een contact opnemen via <strong>social media</strong></h3>
+    <h3 class="heading-1 white tac">you can also contact me via <strong>social media</strong></h3>
     <div class="intersection-1__buttons">
       <a href="https://linkedin.com/michal-antczak"><i class="zmdi zmdi-linkedin blue"></i></a>
       <a href="https://facebook/webdesignstudiopurmerend"><i class="zmdi zmdi-whatsapp green"></i></a>      
@@ -201,88 +180,96 @@
     
   </section>
 
-  <!-- footer -->
+  <!-- confiramtion  -->
+  <section class="confirmation">
+    <div class="confirmation__close"><i class="zmdi zmdi-close white"></i></div>
+    <h3 class='heading-1 white'>Bedankt voor uw bericht!</h3>
+    <p class='para-1 blue'>Ik heb jouw bericht in goede orde ontvangen. Ik sterf ernaar om zo snel mogelijk contact met je op te nemen.</p>
+  </section>
 
-  <footer class='footer'>
-
-    <div class="footer__layout">
-
-      <div class="footer__name">
-        <div class="footer__name--logo">
-          <img id="image-logo-2" alt="logo" width='37' height='37'>
-          <h1><span class='red'>M</span>ichal <span class='blue'>A</span>ntczak</h1>
+    <!-- footer -->
+    
+    <footer class='footer'>
+    
+      <div class="footer__layout">
+    
+        <div class="footer__name">
+          <div class="footer__name--logo">
+            <img id="image-logo-2" alt="logo" width='37' height='37'>
+            <h1><span class='red'>M</span>ichal <span class='blue'>A</span>ntczak</h1>
+          </div>
+          <p class="para-1">Web Designer & Developer</p>
         </div>
-        <p class="para-1">Web Designer & Developer</p>
+    
+        <div class="footer__contact">
+          <a class='para-1 grey' href="mailto:info@michalantczak.com"><i
+              class="zmdi zmdi-email"></i>info@michalantczak.com</a>
+          <a class='para-1 grey' href="tel:0031682307051"><i class="zmdi zmdi-phone"></i>(+31) (0) 6 82 30 70 51</a>
+        </div>
+    
+        <div class="footer__info-1">
+          <p class="para-small blue">Do you want to work with me? I am available from Monday to Saturday between 9:00 and
+            17:00, or send me an e-mail
+            whenever you want.</p>
+        </div>
+    
+        <div class="footer__info-2">
+          <p class="para-small red">Dive into my website, visit my social media profiles, get to know me better. Contact me
+            and make an appointment
+            for an introductory meeting.</p>
+        </div>
+    
+        <div class="footer__btn footer__btn--home">
+          <button class='btn-home'>
+            <i class="zmdi zmdi-home blue"></i>
+            Homepage
+          </button>
+        </div>
+    
+        <div class="footer__btn footer__btn--skills">
+          <button class='btn-skills'>
+            <i class="zmdi zmdi-code red"></i>
+            Skills
+          </button>
+        </div>
+        <div class="footer__btn footer__btn--portfolio">
+          <button class='btn-portfolio'>
+            <i class="zmdi zmdi-collection-case-play green"></i>
+            Portfolio
+          </button>
+        </div>
+        <div class="footer__btn footer__btn--contact">
+          <button class='btn-contact'>
+            <i class="zmdi zmdi-headset-mic red"></i>
+            Contact
+          </button>
+        </div>
+        <div class="footer__btn footer__btn--certificats">
+          <button class='btn-certificaten'>
+            <i class="zmdi zmdi-graduation-cap green"></i>
+            Certificats
+          </button>
+        </div>
+    
+        <!-- footer decorations -->
+        <div class="footer-deco-1"></div>
+        <div class="footer-deco-2"></div>
+        <div class="footer-deco-3"></div>
+        <div class="footer-deco-4"></div>
+    
       </div>
-
-      <div class="footer__contact">
-        <a class='para-1 grey' href="mailto:info@michalantczak.com"><i
-            class="zmdi zmdi-email"></i>info@michalantczak.com</a>
-        <a class='para-1 grey' href="tel:0031682307051"><i class="zmdi zmdi-phone"></i>(+31) (0) 6 82 30 70
-          51</a>
+    
+      <div class="footer__copyright">
+        <p class='footer__copyright--text para-small'></p>
+        <ul>
+          <li><a href="https://github.io/vastlaan">Github</a></li>
+          <li><a href="https://linkedin.com/michal-antczak">LinkedIn</a></li>
+          <li><a href="https://www.facebook.com/webdesignstudiopurmerend">Facebook</a></li>
+          <li><a href="./contact.html">Cookies Policy</a></li>
+        </ul>
       </div>
-
-      <div class="footer__info-1">
-        <p class="para-small blue">Wil je met mij samenwerken? Ik ben bereikbaar vanaf Maandag t/m Zaterdag
-          tussen 9:00 en 17:00, of stuur mij een e-mail wanneer je wilt.</p>
-      </div>
-
-      <div class="footer__info-2">
-        <p class="para-small red">Duik in mijn website, bezoek mijn social media profilen, leer mij beter
-          kennen. Neem contact met mij en maak een afspraak voor kennismakingsgesprek.</p>
-      </div>
-
-      <div class="footer__btn footer__btn--home">
-        <button class='btn-home'>
-          <i class="zmdi zmdi-home blue"></i>
-          Voorpagina
-        </button>
-      </div>
-
-      <div class="footer__btn footer__btn--skills">
-        <button class='btn-skills'>
-          <i class="zmdi zmdi-code red"></i>
-          Skills
-        </button>
-      </div>
-      <div class="footer__btn footer__btn--portfolio">
-        <button class='btn-portfolio'>
-          <i class="zmdi zmdi-collection-case-play green"></i>
-          Portfolio
-        </button>
-      </div>
-      <div class="footer__btn footer__btn--contact">
-        <button class='btn-contact'>
-          <i class="zmdi zmdi-headset-mic red"></i>
-          Contact
-        </button>
-      </div>
-      <div class="footer__btn footer__btn--certificats">
-        <button class='btn-certificaten'>
-          <i class="zmdi zmdi-graduation-cap green"></i>
-          Certificaten
-        </button>
-      </div>
-
-      <!-- footer decorations -->
-      <div class="footer-deco-1"></div>
-      <div class="footer-deco-2"></div>
-      <div class="footer-deco-3"></div>
-      <div class="footer-deco-4"></div>
-
-    </div>
-
-    <div class="footer__copyright">
-      <p class='footer__copyright--text para-small'></p>
-      <ul>
-        <li><a href="https://github.io/vastlaan">Github</a></li>
-        <li><a href="https://linkedin.com/michal-antczak">LinkedIn</a></li>
-        <li><a href="https://www.facebook.com/webdesignstudiopurmerend">Facebook</a></li>
-        <li><a href="./contact.html">Cookies Policy</a></li>
-      </ul>
-    </div>
-
-  </footer>
+    
+    </footer>
 
 </body>
 

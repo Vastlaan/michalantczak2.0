@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="ie=edge" http-equiv="x-ua-compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#222" />
+  <title><%= htmlWebpackPlugin.options.title %></title>  
+</head>
+
+<body>
+  <!-- navigation -->
+  <nav class='navigation'>
+    
+      <div class="navigation__layout">
+        <div class='navigation__logo'>
+          <button class='btn-home'><img id="image-logo" alt="logo" width='37' height='37'></button>
+          <button class='btn-home'>
+            <h1><span class='red'>M</span>ichal <span class='blue'>A</span>ntczak</h1>
+          </button>
+          <button class="navigation__toggle hidelrgdev"><i class="zmdi zmdi-menu"></i></button>
+        </div>
+        <div class='navigation__menu'>
+          <ul class='navigation__links'>
+            <a href="./skills.html"><li>Skills</li></a>
+            <a href="./portfolio.html"><li>Portfolio</li></a>
+            <a href="./certificaten.html"><li>Certificats</li></a>
+            <a href="./contact.html"><li>Contact</li></a>
+          </ul>
+          <div class='navigation__icons'>
+            <a href="https://github.com/vastlaan">
+                <i class="zmdi zmdi-github grey"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/michal-antczak/">
+              <i class="zmdi zmdi-linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+  </nav>
+
+  <!-- header -->
+  <header class="header">
+    <img width='587' height='587' id="image-decoration-1" alt='circle website decoration'>
+    <img width='415' height='593' id="image-decoration-2" alt='square website decoration'>
+    <img width='418' height='207' id="image-decoration-3" alt='triangular website decoration'>
+
+    <div class='container-narrow'>
+      <div class="header__layout">
+        <div class="header__motto">
+          <p class="para-long alhl">
+            My designs combine form and aesthetics with stylish and structured code.
+          </p>
+        </div>
+        <div class="header__disclaimer">
+          <p class=" blue para-long alhl">
+            All my websites are responsive. Every screen diameter has its fitting layout and content structure, so that website
+            displays properly on various different devices
+          </p>
+        </div>
+        <div class="header__image alhl">
+          <img  id="image-myself" alt="michal antczak freelance webdeveloper" width='353' height='426'>
+        </div>
+        <div class="header__info">
+          <h3 class="heading-3 alhr">Web Designer & Developer</h3>
+          <h1 class="heading-1 alhr">
+            Are you <strong>looking</strong> for someone to enrich your <span>developers</span> team?
+          </h1>
+          <p class="para-2 alhr">
+            Someone who knows fronted and backend technologies and
+            has insight into online marketing strategies?
+            
+          </p>
+          <div class="header__info--btns">
+            <button class="button-empty btn-contact alhb">Contact</button>
+            <button class="button-empty btn-certificaten alhb">Certificates</button>
+          </div>
+          <p class="blue para-2 alhr ">
+            Stop searching, you are in the right spot! I know modern technologies and have experience building
+            websites on different platforms.
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- skills -->
+  <section class="skills">
+    <div class="container-narrow">
+      <div class="skills__layout als1">
+
+        <div class="skills__intro">
+          <h3 class="heading-3 red">Skills</h3>
+          <div class="skills__intro--image">
+            <img  alt="person contemplating" id="image-1">
+          </div>
+          <h1 class="heading-1 black">
+            Enthusiastic web developer who already has some experience with building websites
+          </h1>
+          <p class="blue para-2 ">
+            Stop met verder zoeken, u bent op de juiste plek!
+          </p>
+        </div>
+
+        <div class="skills__details">
+          <h3 class="heading-3 black">Skills overview</h3>
+          <p class="blue para-1 ">
+            I design functional products packaged in a sharp design. I also find it very important to be up to date with modern
+            technologies.
+          </p>
+          <p class="grey para-1 ">
+          I understand the principles of iterative project development Agile / Scrum (however I have no practical experience).
+          </p>
+          <ul class="skills__details--list">
+            <li> <span class="devicons devicons-react blue"></span> Frontend Development Tools</li>
+            <li><span class="devicons devicons-npm green"></span> Backend Development Tools</li>
+            <li><i class="zmdi zmdi-palette red"></i> Design Tools</li>
+            <li><span class="devicons devicons-database blue"></span> Cloud solutions and Linux VPS</li>
+            <li><span class="devicons devicons-git black"></span>Git, Docker and much more...</li>
+          </ul>
+          <div class="skills__details--btn">
+            <button class="button-primary btn-skills als1btn"><span>Read more...</span></button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- portfolio -->
+  <section class="portfolio">
+
+    <img width='415' height='593' id="image-decoration-4" alt='square website decoration'>
+    <img width='216' height='216' id="image-decoration-5" class='als2deco' alt='cog website decoration'>
+    <i class="zmdi zmdi-chevron-down" id="image-decoration-6"></i>
+
+    <div class="container-narrow">
+      <div class="portfolio__layout als2">
+
+        <div class="portfolio__front">
+          <h1>
+            Portfolio
+          </h1>
+          <p class='para-long grey'>
+            I<br/>
+            look at Things<br/>
+            from different Perspective<br/>
+          </p>
+        </div>
+
+        <div class="portfolio__center">         
+            <div class="portfolio__center--str">
+              <p>Creative solution</p>
+            </div>
+            <div class='portfolio__center--eye'>
+              <a href="./portfolio.html">PORT</a>
+              <a href="./portfolio.html">FOLIO</a>
+            </div>
+            <div class="portfolio__center--trn">
+              <p>Custom design</p>
+            </div>
+        </div>
+
+        <div class="portfolio__back">
+          <div class='profolio__back--text'>
+            <p class='para-long grey'>        
+              My work is recognized by the continuous development process. Projects have always been carried out using the latest
+              technologies, with passion and commitment
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- slider -->
+  <section class='gallery'>
+
+    <div class="slider">
+
+      <div class="slider__slide slider__slide--1 active-slide" id='slide-1'>
+        <div class="slider__slide--container">
+          <h3 class="heading-3">Web Designer & Developer</h3>
+          <h1 class="heading-1">
+            I think along <strong>constructively</strong> and ask <span>critical</span> questions
+          </h1>
+          <p class="para-2">
+            Iemand die fronted- en backend-technologieën kent en
+            inzicht heeft in online marketingstrategieën?
+          
+          </p>
+          <div class="slider__slide--btns">
+            <button class="button-primary btn-contact"><span>Contact</span></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="slider__slide slider__slide--2" id='slide-2'>
+        <img width='415' height='593' id="image-decoration-7" alt='square website decoration'>
+        <div class="slider__slide--container">
+          <div class='flxcol'>
+            <h1 class="heading-1">
+              <span>Reliable</span> & committed
+            </h1>
+            <div class='flximg'>
+              <img id='slide-2-img-1' alt="myself" width="226" height="226">
+            </div>
+            <h3 class="para-1 white">Michal Antczak</h3>
+            <p class="para-1 grey ital">Fullstack Web Developer</p>
+            <p class="para-2 ital">
+              I transform designs into functional interfaces on mobile and desktop
+            </p>
+            <button class="button-primary btn-portfolio"><span>Portfolio</span></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="slider__slide slider__slide--3" id='slide-3'>
+
+        <div class="slider__slide--3-links">
+          <a href='https://github.io/vastlaan'>
+            <i class="zmdi zmdi-github white"></i>
+            <span>Github</span>
+          </a>
+          <a href='https://linkedin.com/michal-antczak'>
+            <i class="zmdi zmdi-linkedin blue"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href='https://www.facebook.com/webdesignstudiopurmerend'>
+            <i class="zmdi zmdi-facebook blue"></i>
+            <span>Facebook</span>
+          </a>
+          <a href='https://wa.me/31682307051?text=Hey there!%20We%20are%20interested%20in%20cooperating%20with%20you.%20Please%20contact%20us%20asap!'>
+            <i class="zmdi zmdi-whatsapp green"></i>
+            <span>WhatsApp</span>
+          </a>
+        </div>
+
+        <div class="slider__slide--grid">
+
+          <div class='flxcol hidesmldev'>
+            <p class="heading-1">Follow me online, check my <span>github</span> account or simply get in touch.</p>
+            <p class="para-1 ital">
+              It is important to find someone who fits your team. Make an introductory meeting with me and who knows, it will be a
+              perfect match.
+          </p>
+          </div>
+          <div class='flxcol'>
+            <h3 class='heading-1'><span>Contact:</span></h3>
+            <ul>
+              <li><a href="mailto:info@michalantczak.com">info@michalantczak.com</a></li>
+              <li><a href="tel:0031682307051">(+31) (0) 6 82 30 70 51</a></li>
+              <li><a href="https://itcontext.nl">www.itcontext.nl</a></li>
+              <li><a href="mailto:info@itcontext.nl">info@itcontext.nl</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <div class="slider__buttons">
+    </div>
+  </section>
+
+  <!-- intersection -->
+  <section class="intersection-1">
+    <hr class='line blue' />
+    <h3 class="heading-1 white tac">Dive into my projects and get to know me better</h3>
+    <button class="button-primary btn-portfolio"><span>Portfolio</span></button>
+  </section>
+
+  <!-- footer -->
+
+  <footer class='footer'>
+
+    <div class="footer__layout">
+
+      <div class="footer__name">
+        <div class="footer__name--logo">
+          <img id="image-logo-2" alt="logo" width='37' height='37'>
+          <h1><span class='red'>M</span>ichal <span class='blue'>A</span>ntczak</h1>
+        </div>
+        <p class="para-1">Web Designer & Developer</p>
+      </div>
+
+      <div class="footer__contact">
+        <a class='para-1 grey' href="mailto:info@michalantczak.com"><i class="zmdi zmdi-email"></i>info@michalantczak.com</a>
+        <a class='para-1 grey' href="tel:0031682307051"><i class="zmdi zmdi-phone"></i>(+31) (0) 6 82 30 70 51</a>
+      </div>
+
+      <div class="footer__info-1">
+        <p class="para-small blue">Do you want to work with me? I am available from Monday to Saturday between 9:00 and 17:00, or send me an e-mail
+        whenever you want.</p>
+      </div>
+
+      <div class="footer__info-2">
+        <p class="para-small red">Dive into my website, visit my social media profiles, get to know me better. Contact me and make an appointment
+        for an introductory meeting.</p>
+      </div>
+
+      <div class="footer__btn footer__btn--home">
+        <button class='btn-home'>
+          <i class="zmdi zmdi-home blue"></i>
+          Homepage
+        </button>
+      </div>
+
+      <div class="footer__btn footer__btn--skills">
+        <button class='btn-skills'>
+          <i class="zmdi zmdi-code red"></i>
+          Skills
+        </button>
+      </div>
+      <div class="footer__btn footer__btn--portfolio">
+        <button class='btn-portfolio'>
+          <i class="zmdi zmdi-collection-case-play green"></i>
+          Portfolio
+        </button>
+      </div>
+      <div class="footer__btn footer__btn--contact">
+        <button class='btn-contact'>
+          <i class="zmdi zmdi-headset-mic red"></i>
+          Contact
+        </button>
+      </div>
+      <div class="footer__btn footer__btn--certificats">
+        <button class='btn-certificaten'>
+          <i class="zmdi zmdi-graduation-cap green"></i>
+          Certificats
+        </button>
+      </div>
+
+      <!-- footer decorations -->
+      <div class="footer-deco-1"></div>
+      <div class="footer-deco-2"></div>
+      <div class="footer-deco-3"></div>
+      <div class="footer-deco-4"></div>
+
+    </div>
+
+    <div class="footer__copyright">
+      <p class='footer__copyright--text para-small'></p>
+      <ul>
+        <li><a href="https://github.io/vastlaan">Github</a></li>
+        <li><a href="https://linkedin.com/michal-antczak">LinkedIn</a></li>
+        <li><a href="https://www.facebook.com/webdesignstudiopurmerend">Facebook</a></li>
+        <li><a href="./contact.html">Cookies Policy</a></li>
+      </ul>
+    </div>
+
+  </footer>
+
+</body>
+
+</html>
