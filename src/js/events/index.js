@@ -58,3 +58,28 @@ function toggleMenu() {
 }
 const toggleMenubutton = document.querySelector(".navigation__toggle");
 toggleMenubutton.addEventListener("click", toggleMenu);
+
+// cookies statement
+
+const cookiePolicy = JSON.parse(
+    localStorage.getItem("michalantczakcookiepolicy")
+);
+
+if (!cookiePolicy || !cookiePolicy.agreed) {
+    gsap.to(".cookiesStatement", { autoAlpha: 1, y: "0" });
+}
+
+function agreeToCooikeTerm() {
+    const cookieMessage = { agreed: true };
+    localStorage.setItem(
+        "michalantczakcookiepolicy",
+        JSON.stringify(cookieMessage)
+    );
+
+    gsap.to(".cookiesStatement", { autoAlpha: 0, y: "100%", duration: 0.6 });
+}
+
+const cookiesStatementButton = document.querySelector(
+    ".cookiesStatement > button"
+);
+cookiesStatementButton.addEventListener("click", agreeToCooikeTerm);

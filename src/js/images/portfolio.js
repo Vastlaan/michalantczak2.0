@@ -6,7 +6,7 @@ import Webshop from "../../img/project-webshop.jpg";
 import Restaurant from "../../img/project-restaurant.jpg";
 import Barber from "../../img/project-barber.jpg";
 import Resume from "../../img/project-resume.jpg";
-import Itcontext from "../../img/project-itcontext.jpg";
+//import Itcontext from "../../img/project-itcontext.jpg";
 import Elementor from "../../img/project-elementor.jpg";
 
 // loading images
@@ -27,8 +27,8 @@ const barber = document.querySelector("#portfolio-image-4");
 barber.src = Barber;
 const resume = document.querySelector("#portfolio-image-5");
 resume.src = Resume;
-const itcontext = document.querySelector("#portfolio-image-6");
-itcontext.src = Itcontext;
+// const itcontext = document.querySelector("#portfolio-image-6");
+// itcontext.src = Itcontext;
 const elementor = document.querySelector("#portfolio-image-7");
 elementor.src = Elementor;
 

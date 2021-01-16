@@ -16,6 +16,7 @@ module.exports = {
         skills: "./src/js/skills.js",
         certificaten: "./src/js/certificaten.js",
         portfolio: "./src/js/portfolio.js",
+        cookies: "./src/js/cookies.js",
     },
 
     // use build in source map to track files in the bundle
@@ -308,6 +309,25 @@ module.exports = {
             favicon: "./src/img/logo.svg",
             filename: "portfolio.html",
             template: "./src/pages/nl/portfolio.ejs",
+        }),
+        new HtmlWebpackPlugin({
+            // specifies html template file to use, auto generate index.html file in dist directory
+            chunks: ["cookies"],
+            title: "Cookies Policy Michal Antczak",
+            lang: "nl-NL",
+            meta: [
+                {
+                    name: "description",
+                    content: "Cookies policy.",
+                },
+                {
+                    name: "robots",
+                    content: "noindex, unfollow",
+                },
+            ],
+            favicon: "./src/img/logo.svg",
+            filename: "cookies.html",
+            template: "./src/pages/nl/cookies.ejs",
         }),
     ],
 };

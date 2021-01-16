@@ -16,7 +16,10 @@ module.exports = {
         skills: "./src/js/skills.js",
         certificaten: "./src/js/certificaten.js",
         portfolio: "./src/js/portfolio.js",
+        cookies: "./src/js/cookies.js",
     },
+    // use build in source map to track files in the bundle
+    devtool: "inline-source-map",
 
     // filename and directory where files are compiled to
     output: {
@@ -96,7 +99,7 @@ module.exports = {
             chunks: ["index"],
             // inject: "head",
             title: "Michal Antczak - freelance webdeveloper",
-            lang: "en-US",
+            lang: "en",
             meta: [
                 {
                     name: "description",
@@ -137,7 +140,7 @@ module.exports = {
             // specifies html template file to use, auto generate index.html file in dist directory
             chunks: ["contact"],
             title: "Contact Michal Antczak",
-            lang: "en-US",
+            lang: "en",
             meta: [
                 {
                     name: "description",
@@ -178,7 +181,7 @@ module.exports = {
             // specifies html template file to use, auto generate index.html file in dist directory
             chunks: ["skills"],
             title: "Skills Michal Antczak",
-            lang: "en-US",
+            lang: "en",
             meta: [
                 {
                     name: "description",
@@ -219,7 +222,7 @@ module.exports = {
             // specifies html template file to use, auto generate index.html file in dist directory
             chunks: ["certificaten"],
             title: "Certificats Michal Antczak",
-            lang: "en-US",
+            lang: "en",
             meta: [
                 {
                     name: "description",
@@ -260,7 +263,7 @@ module.exports = {
             // specifies html template file to use, auto generate index.html file in dist directory
             chunks: ["portfolio"],
             title: "Portfolio Michal Antczak",
-            lang: "en-US",
+            lang: "en",
             meta: [
                 {
                     name: "description",
@@ -294,6 +297,25 @@ module.exports = {
             favicon: "./src/img/logo.svg",
             filename: "portfolio.html",
             template: "./src/pages/en/portfolio.ejs",
+        }),
+        new HtmlWebpackPlugin({
+            // specifies html template file to use, auto generate index.html file in dist directory
+            chunks: ["cookies"],
+            title: "Cookies Policy Michal Antczak",
+            lang: "en",
+            meta: [
+                {
+                    name: "description",
+                    content: "Cookies policy.",
+                },
+                {
+                    name: "robots",
+                    content: "noindex, unfollow",
+                },
+            ],
+            favicon: "./src/img/logo.svg",
+            filename: "cookies.html",
+            template: "./src/pages/nl/cookies.ejs",
         }),
     ],
 };

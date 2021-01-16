@@ -1,0 +1,45 @@
+.cookiesStatement {
+    position: fixed;
+    bottom: 0rem;
+    left: 0;
+    z-index: 98;
+    transition: all 0.3s;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 2rem;
+    background-color: #333;
+    transform: translateY(100%);
+    opacity: 0;
+    visibility: 0;
+
+    p {
+        font-size: 1.6rem;
+        letter-spacing: 0.2rem;
+        color: snow;
+
+        a {
+            text-decoration: none;
+            color: $color-primary;
+        }
+    }
+
+    button {
+        margin-top: 1.4rem;
+        border: none;
+        border-radius: 3px;
+        background-color: $color-secondary;
+        color: $color-white;
+        padding: 1rem 2.5rem;
+        font-size: 1.9rem;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:hover {
+            background-color: seagreen;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+}
