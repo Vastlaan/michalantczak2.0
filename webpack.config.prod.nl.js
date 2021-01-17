@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
     // which environment is this file applying to
@@ -93,6 +94,9 @@ module.exports = {
             TOKEN: JSON.stringify(
                 "hhtel3922Ssjeeo3rjesdfksfowlwodFEWFFsfjfWHNNRE"
             ),
+        }),
+        new CopyPlugin({
+            patterns: [{ from: "./src/seo_assets", to: "./dist/nl" }],
         }),
         new HtmlWebpackPlugin({
             // specifies html template file to use, auto generate index.html file in dist directory
