@@ -108,7 +108,7 @@ module.exports = {
             ),
         }),
         new CopyPlugin({
-            patterns: [{ from: "./src/seo_assets", to: "./dist/nl" }],
+            patterns: [{ from: "./src/seo_assets" }],
         }),
         new HtmlWebpackPlugin({
             // specifies html template file to use, auto generate index.html file in dist directory
