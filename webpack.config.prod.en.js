@@ -127,10 +127,7 @@ module.exports = {
                     content:
                         "Need a Web Developer? Choose me and stand out from the competition. I design beautiful and unique websites, webapplications, webshops and online advertisements for you.",
                 },
-                {
-                    name: "og:image",
-                    content: ".src/img/og_image.jpg",
-                },
+
                 {
                     name: "og:url",
                     content: "https://michalantczak.com",
@@ -168,10 +165,7 @@ module.exports = {
                     content:
                         "Contact me. Fill in the form below or call: (+31) (0) 6 82 30 70 51 or send me an e-mail: info@michalantczak.com",
                 },
-                {
-                    name: "og:image",
-                    content: ".src/img/og_image.jpg",
-                },
+
                 {
                     name: "og:url",
                     content: "https://michalantczak.com/contact.html",
@@ -209,10 +203,7 @@ module.exports = {
                     content:
                         "Discover which programming languages, frameworks and other web tools I know best. Do you use similar technologies in your projects? Fine! I can get started right away!",
                 },
-                {
-                    name: "og:image",
-                    content: ".src/img/og_image.jpg",
-                },
+
                 {
                     name: "og:url",
                     content: "https://michalantczak.com/skills.html",
@@ -252,7 +243,7 @@ module.exports = {
                 },
                 {
                     name: "og:image",
-                    content: "./src/img/og_image.jpg",
+                    content: "./src/img/assets/og_image.jpg",
                 },
                 {
                     name: "og:url",
@@ -289,10 +280,7 @@ module.exports = {
                     name: "og:description",
                     content: "Gallery of the projects I have designed.",
                 },
-                {
-                    name: "og:image",
-                    content: ".src/img/og_image.jpg",
-                },
+
                 {
                     name: "og:url",
                     content: "https://michalantczak.com/portfolio.html",

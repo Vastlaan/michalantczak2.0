@@ -140,10 +140,6 @@ module.exports = {
                         "Webdeveloper nodig? Kies mij en onderscheid je van de concurrentie. Ik ontwerp voor je een prachtige en unieke websites, webapplicaties, webshops en online advertenties.",
                 },
                 {
-                    name: "og:image",
-                    content: ".src/img/og_image.jpg",
-                },
-                {
                     name: "og:url",
                     content: "https://michalantczak.com",
                 },
@@ -181,10 +177,6 @@ module.exports = {
                         "Neem contact met mij op. Vul onderstande formulier of bel: (+31) (0) 6 82 30 70 51  of stuur mij een e-mail: info@michalantczak.com",
                 },
                 {
-                    name: "og:image",
-                    content: ".src/img/og_image.jpg",
-                },
-                {
                     name: "og:url",
                     content: "https://michalantczak.com/contact.html",
                 },
@@ -220,10 +212,6 @@ module.exports = {
                     name: "og:description",
                     content:
                         "Ontdek welke programeur talen, frameworks en andere webtools ken ik best. Gebruik je gelijke technologieen in jouw projecten? Prima! Ik kan voor je direct aan de slag!",
-                },
-                {
-                    name: "og:image",
-                    content: ".src/img/og_image.jpg",
                 },
                 {
                     name: "og:url",
@@ -300,10 +288,6 @@ module.exports = {
                 {
                     name: "og:description",
                     content: "Galerij van de projecten die ik heb ontworpen.",
-                },
-                {
-                    name: "og:image",
-                    content: ".src/img/og_image.jpg",
                 },
                 {
                     name: "og:url",
