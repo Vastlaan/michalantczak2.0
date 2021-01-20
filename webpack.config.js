@@ -18,6 +18,7 @@ module.exports = {
         certificaten: "./src/js/certificaten.js",
         portfolio: "./src/js/portfolio.js",
         cookies: "./src/js/cookies.js",
+        error: "./src/js/error.js",
     },
 
     // use build in source map to track files in the bundle
@@ -316,6 +317,25 @@ module.exports = {
             favicon: "./src/img/logo.svg",
             filename: "cookies.html",
             template: "./src/pages/nl/cookies.ejs",
+        }),
+        new HtmlWebpackPlugin({
+            // specifies html template file to use, auto generate index.html file in dist directory
+            chunks: ["error"],
+            title: "Page not found Michal Antczak",
+            lang: "nl-NL",
+            meta: [
+                {
+                    name: "description",
+                    content: "Page not found.",
+                },
+                {
+                    name: "robots",
+                    content: "noindex, unfollow",
+                },
+            ],
+            favicon: "./src/img/logo.svg",
+            filename: "error.html",
+            template: "./src/pages/nl/error.ejs",
         }),
     ],
 };
