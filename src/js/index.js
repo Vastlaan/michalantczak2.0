@@ -1,9 +1,9 @@
-// styles
-import "../styles/landing_main.scss";
-// animations
-import "./animations/landing";
-// images
-import "./images/landing";
-import "./slider";
-import "./events";
-import "./footer";
+import App from "./components/landing";
+
+document.querySelector("body").appendChild(App());
+
+require("./images/landing");
+require("./events");
+require("./animations/landing");
+require("./slider");
+require("./footer");
