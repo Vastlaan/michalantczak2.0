@@ -301,10 +301,6 @@ module.exports = {
                     name: "description",
                     content: "Cookies policy.",
                 },
-                {
-                    name: "robots",
-                    content: "noindex, unfollow",
-                },
             ],
             favicon: "./src/img/logo.svg",
             filename: "cookies.html",
