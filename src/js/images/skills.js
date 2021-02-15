@@ -8,6 +8,8 @@ import Gatsby from "../../img/gatsby-logo.png";
 import GraphQl from "../../img/graphql-logo.png";
 import Jest from "../../img/jest-logo.png";
 import TypeScript from "../../img/typescript-logo.png";
+import FlagEn from "../../img/flag-en.svg";
+import FlagNl from "../../img/flag-nl.svg";
 
 // loading images
 
@@ -15,6 +17,16 @@ const logo = document.querySelector("#image-logo");
 const logo2 = document.querySelector("#image-logo-2");
 logo.src = Logo;
 logo2.src = Logo;
+
+const flag = document.querySelector("#image-flag-en");
+if (flag) {
+    flag.src = FlagEn;
+}
+
+const flagNl = document.querySelector("#image-flag-nl");
+if (flagNl) {
+    flagNl.src = FlagNl;
+}
 
 const decoration5 = document.querySelector("#decoration-5");
 decoration5.src = Deco5;

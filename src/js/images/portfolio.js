@@ -8,6 +8,8 @@ import Barber from "../../img/project-barber.jpg";
 import Resume from "../../img/project-resume.jpg";
 //import Itcontext from "../../img/project-itcontext.jpg";
 import Elementor from "../../img/project-elementor.jpg";
+import FlagEn from "../../img/flag-en.svg";
+import FlagNl from "../../img/flag-nl.svg";
 
 // loading images
 
@@ -16,6 +18,16 @@ const logo2 = document.querySelector("#image-logo-2");
 
 logo.src = Logo;
 logo2.src = Logo;
+
+const flag = document.querySelector("#image-flag-en");
+if (flag) {
+    flag.src = FlagEn;
+}
+
+const flagNl = document.querySelector("#image-flag-nl");
+if (flagNl) {
+    flagNl.src = FlagNl;
+}
 
 const noir = document.querySelector("#portfolio-image-1");
 noir.src = Noir;

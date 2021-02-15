@@ -10,6 +10,8 @@ import Cert5 from "../../img/cert-5.png";
 import Cert6 from "../../img/cert-6.jpg";
 import Cert7 from "../../img/cert-7.png";
 import Cert8 from "../../img/cert-8.png";
+import FlagEn from "../../img/flag-en.svg";
+import FlagNl from "../../img/flag-nl.svg";
 
 // loading images
 
@@ -18,6 +20,15 @@ const logo2 = document.querySelector("#image-logo-2");
 
 logo.src = Logo;
 logo2.src = Logo;
+const flag = document.querySelector("#image-flag-en");
+if (flag) {
+    flag.src = FlagEn;
+}
+
+const flagNl = document.querySelector("#image-flag-nl");
+if (flagNl) {
+    flagNl.src = FlagNl;
+}
 
 const cert1 = document.querySelector("#image-certificaten-1");
 cert1.src = Cert1;

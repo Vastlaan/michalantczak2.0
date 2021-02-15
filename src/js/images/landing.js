@@ -7,13 +7,24 @@ import Decoration4 from "../../img/cog3.svg";
 import Myself from "../../img/myself.png";
 import Image1 from "../../img/image-1.jpg";
 import Me2 from "../../img/me-2.png";
+import FlagEn from "../../img/flag-en.svg";
+import FlagNl from "../../img/flag-nl.svg";
 
 // loading images
 
 const logo = document.querySelector("#image-logo");
 const logo2 = document.querySelector("#image-logo-2");
+const flag = document.querySelector("#image-flag-en");
 logo.src = Logo;
 logo2.src = Logo;
+if (flag) {
+    flag.src = FlagEn;
+}
+
+const flagNl = document.querySelector("#image-flag-nl");
+if (flagNl) {
+    flagNl.src = FlagNl;
+}
 
 const decoration1 = document.querySelector("#image-decoration-1");
 decoration1.src = Decoration1;
