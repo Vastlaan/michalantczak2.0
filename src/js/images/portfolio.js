@@ -8,6 +8,7 @@ import Barber from "../../img/project-barber.jpg";
 import Resume from "../../img/project-resume.jpg";
 //import Itcontext from "../../img/project-itcontext.jpg";
 import Elementor from "../../img/project-elementor.jpg";
+import Chefsbook from "../../img/project-chefsbook.jpg";
 import FlagEn from "../../img/flag-en.svg";
 import FlagNl from "../../img/flag-nl.svg";
 
@@ -43,6 +44,8 @@ resume.src = Resume;
 // itcontext.src = Itcontext;
 const elementor = document.querySelector("#portfolio-image-7");
 elementor.src = Elementor;
+const chefsbook = document.querySelector("#portfolio-image-10");
+chefsbook.src = Chefsbook;
 
 const deco11 = document.querySelector("#decoration-11");
 deco11.src = Deco1;
