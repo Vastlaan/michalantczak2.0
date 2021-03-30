@@ -9,6 +9,7 @@ import Resume from "../../img/project-resume.jpg";
 //import Itcontext from "../../img/project-itcontext.jpg";
 import Elementor from "../../img/project-elementor.jpg";
 import Chefsbook from "../../img/project-chefsbook.jpg";
+import FirstHair from '../../img/project-first-hair.jpg'
 import FlagEn from "../../img/flag-en.svg";
 import FlagNl from "../../img/flag-nl.svg";
 
@@ -46,6 +47,8 @@ const elementor = document.querySelector("#portfolio-image-7");
 elementor.src = Elementor;
 const chefsbook = document.querySelector("#portfolio-image-10");
 chefsbook.src = Chefsbook;
+const firsthair = document.querySelector("#portfolio-image-11")
+firsthair.src = FirstHair
 
 const deco11 = document.querySelector("#decoration-11");
 deco11.src = Deco1;
